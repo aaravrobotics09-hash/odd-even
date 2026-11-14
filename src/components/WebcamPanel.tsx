@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { FilesetResolver, HandLandmarker } from '@mediapipe/tasks-vision';
+import type { HandLandmarker as HandLandmarkerType } from '@mediapipe/tasks-vision';
 import {
   FingerTelemetry,
   GestureStabilityTracker,
@@ -32,7 +32,7 @@ export default function WebcamPanel({
 }: WebcamPanelProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const landmarkerRef = useRef<HandLandmarker | null>(null);
+  const landmarkerRef = useRef<HandLandmarkerType | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const rafRef = useRef<number | null>(null);
   const trackerRef = useRef<GestureStabilityTracker>(new GestureStabilityTracker(750));
@@ -85,28 +85,39 @@ export default function WebcamPanel({
 
       try {
         if (!landmarkerRef.current) {
-          const vision = await FilesetResolver.forVisionTasks('/mediapipe/wasm');
+          const { FilesetResolver, HandLandmarker } = await import('@mediapipe/tasks-vision');
           const modelPath =
             'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task';
+          const localWasm = `${import.meta.env.BASE_URL}mediapipe/wasm`;
+          const cdnWasm = 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@1.2.3/wasm';
+
+          const initWithWasm = async (wasmPath: string) => {
+            const vision = await FilesetResolver.forVisionTasks(wasmPath);
+            try {
+              return await HandLandmarker.createFromOptions(vision, {
+                baseOptions: { modelAssetPath: modelPath, delegate: 'GPU' },
+                runningMode: 'VIDEO',
+                numHands: 1,
+                minHandDetectionConfidence: 0.6,
+                minHandPresenceConfidence: 0.6,
+                minTrackingConfidence: 0.6,
+              });
+            } catch {
+              return await HandLandmarker.createFromOptions(vision, {
+                baseOptions: { modelAssetPath: modelPath, delegate: 'CPU' },
+                runningMode: 'VIDEO',
+                numHands: 1,
+                minHandDetectionConfidence: 0.6,
+                minHandPresenceConfidence: 0.6,
+                minTrackingConfidence: 0.6,
+              });
+            }
+          };
 
           try {
-            landmarkerRef.current = await HandLandmarker.createFromOptions(vision, {
-              baseOptions: { modelAssetPath: modelPath, delegate: 'GPU' },
-              runningMode: 'VIDEO',
-              numHands: 1,
-              minHandDetectionConfidence: 0.6,
-              minHandPresenceConfidence: 0.6,
-              minTrackingConfidence: 0.6,
-            });
+            landmarkerRef.current = await initWithWasm(localWasm);
           } catch {
-            landmarkerRef.current = await HandLandmarker.createFromOptions(vision, {
-              baseOptions: { modelAssetPath: modelPath, delegate: 'CPU' },
-              runningMode: 'VIDEO',
-              numHands: 1,
-              minHandDetectionConfidence: 0.6,
-              minHandPresenceConfidence: 0.6,
-              minTrackingConfidence: 0.6,
-            });
+            landmarkerRef.current = await initWithWasm(cdnWasm);
           }
         }
 
