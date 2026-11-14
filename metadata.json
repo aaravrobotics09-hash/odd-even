@@ -1,0 +1,6 @@
+{
+  "name": "ODD EVEN HAND CRICKET",
+  "description": "Real-time webcam hand-gesture cricket game against an AI bot with custom 1-9 hand recognition, Odd-Even toss, and two-innings match gameplay.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

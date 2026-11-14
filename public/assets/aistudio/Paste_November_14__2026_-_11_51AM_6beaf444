@@ -1,0 +1,4356 @@
+
+User 11:45 AM
+Build a Fully Playable ODD-EVEN HAND CRICKET GAME Against a Bot
+Create a complete, interactive, browser-based game called ODD EVEN HAND CRICKET. The game should combine traditional odd-even hand cricket with real-time webcam hand gesture recognition.
+The player must compete against an AI bot. Both the player and the bot select numbers simultaneously, and the sum of their numbers determines the winner of the toss.
+The game must be genuinely playable, not just a visual demonstration.
+GAME INTRODUCTION
+Create an attractive home screen with:
+Game title: ODD EVEN HAND CRICKET.
+Subtitle: Challenge the Bot!
+A short description explaining the game.
+A START GAME button.
+A HOW TO PLAY button.
+A gesture reference guide showing numbers 1–9.
+An animated cricket-themed background with a stadium, cricket pitch, scoreboard, and floodlights.
+Use a modern cricket-game aesthetic.
+TOSS SYSTEM
+The toss must happen before the cricket match begins.
+Step 1: Choose Odd or Even
+When the player presses START GAME, show:
+"CHOOSE YOUR TOSS"
+Give the player two options:
+ODD
+EVEN
+The player must choose one.
+The bot should also randomly choose its own toss prediction (ODD or EVEN).
+Keep the bot's choice hidden until the toss is completed.
+Step 2: Play the Toss
+After choosing Odd or Even, display:
+"SHOW YOUR NUMBER!"
+The player must show a hand gesture representing a number from 1 to 9 using the webcam.
+At the same time, the bot must randomly select a number between 1 and 9.
+Display both numbers simultaneously after the player gesture is confirmed.
+For example:
+Player chooses: ODD
+Player shows: 3
+Bot shows: 4
+Total: 3 + 4 = 7
+Since 7 is ODD, the player wins the toss.
+Another example:
+Player chooses: EVEN
+Player shows: 3
+Bot shows: 5
+Total: 8
+Since 8 is EVEN, the player wins the toss.
+Step 3: Determine Toss Winner
+Apply these rules:
+If the sum of both numbers is ODD, the player wins if they selected ODD.
+If the sum is EVEN, the player wins if they selected EVEN.
+Otherwise, the bot wins the toss.
+Display an exciting toss result animation.
+Examples:
+"YOU WON THE TOSS!"
+"BOT WON THE TOSS!"
+If the player and bot choose numbers that add up to 10 or another even number, the result must correctly be EVEN.
+CHOOSE BAT OR BOWL
+After winning the toss, the winner gets to choose whether to BAT or BOWL.
+If the player wins:
+Display two buttons: BAT FIRST and BOWL FIRST.
+Let the player make the decision.
+If the bot wins:
+The bot automatically chooses BAT or BOWL.
+Make the decision using a random but sensible AI strategy.
+Display the bot's decision with a short animation.
+The game must then begin with the correct batting order.
+HAND GESTURE RECOGNITION
+Use the following exact custom gesture mapping for both the player and the webcam recognition system.
+Number	Required gesture
+1	Any one of the four fingers raised, thumb folded
+2	Any two of the four fingers raised, thumb folded
+3	Any three of the four fingers raised, thumb folded
+4	All four fingers raised, thumb folded
+5	All five fingers raised, including thumb
+6	Only thumb raised and pointing upward
+7	Only thumb raised and pointing downward
+8	Thumb and index finger raised
+9	Thumb, index and middle fingers raised, with index and middle fingers touching
+Important:
+Support both left and right hands.
+Track all five fingers.
+Detect thumb orientation.
+Detect the touching index and middle fingers for number 9.
+Require stable gestures before confirming a number.
+Ignore invalid or ambiguous gestures.
+Never substitute conventional finger-counting rules.
+5. CRICKET MATCH GAMEPLAY
+After the toss, the actual hand cricket match begins.
+The game must have two innings.
+Innings 1
+The player or bot bats first, depending on the toss result and decision.
+When the player is batting:
+Display "YOU ARE BATTING".
+The player shows a number from 1 to 9 using their hand.
+The bot simultaneously selects a random number from 1 to 9.
+Reveal both numbers together.
+Rules:
+If the player's number and bot's number are DIFFERENT, add the player's number to their score.
+If both numbers are THE SAME, the player is OUT.
+When the player gets out, end the innings.
+Example:
+Player: 4
+Bot: 2
+Score: 4 runs.
+Next ball:
+Player: 6
+Bot: 3
+Score: 10 runs.
+Next ball:
+Player: 5
+Bot: 5
+OUT!
+Final score: 10 runs.
+When the bot is batting:
+Display "BOT IS BATTING".
+The bot chooses a random number from 1 to 9.
+The player shows a number from 1 to 9 using the webcam.
+Reveal both numbers together.
+Rules:
+If both numbers are different, add the bot's number to its score.
+If both numbers are the same, the bot is OUT.
+End the innings when the bot is OUT.
+Example:
+Bot: 7
+Player: 3
+Bot scores 7 runs.
+Next ball:
+Bot: 4
+Player: 4
+BOT OUT!
+SECOND INNINGS AND TARGET
+After the first innings:
+Display the first innings score.
+Announce the target for the second innings.
+Switch batting and bowling roles.
+The second innings follows the exact same gameplay rules.
+The second batting side must chase the target.
+For example:
+Player's first innings score: 24
+Bot's target: 25
+If the bot scores 25 or more before getting out, the bot wins.
+If the bot gets out before reaching 25, the player wins.
+Apply the same logic when the bot bats first.
+MATCH RESULT
+At the end of the match, display a full-screen result.
+Possible outcomes:
+YOU WON!
+BOT WON!
+MATCH TIED!
+Show:
+Player's final score.
+Bot's final score.
+Total runs.
+Number of balls played.
+Toss winner.
+Who batted first.
+Match summary.
+Add buttons:
+PLAY AGAIN
+MAIN MENU
+Use exciting winning and losing animations.
+BOT ARTIFICIAL INTELLIGENCE
+The bot should feel like a real opponent.
+Requirements:
+Select numbers randomly from 1 to 9.
+Make its number selection independent of the player's current selection.
+Do not let the bot see or predict the player's gesture before selecting its own number.
+Reveal both numbers simultaneously.
+Use different short reactions for scoring, defending, and getting out.
+Give the bot an animated character or cricket avatar.
+Show expressions such as happy, surprised, confident, and disappointed.
+The bot should not always choose the same number.
+GAME INTERFACE
+Create the following screens:
+Home screen.
+Odd-Even selection screen.
+Toss animation screen.
+Toss result screen.
+Bat or Bowl decision screen.
+First innings screen.
+Innings break screen.
+Second innings screen.
+Final result screen.
+During the match, the interface must display:
+Player avatar and bot avatar.
+Live scores for both sides.
+Current innings.
+Batting and bowling status.
+Current ball number.
+Target score when chasing.
+Webcam preview.
+Recognized player gesture.
+Bot's selected number.
+Last ball result.
+Current match status.
+10. CRICKET SCOREBOARD
+Create a professional cricket-style scoreboard.
+Example:
+PLAYER: 18/1
+BOT: 12/2
+INNINGS: 2
+TARGET: 19
+BALLS: 4
+LAST BALL: YOU: 6 | BOT: 3
+RESULT: +6 RUNS
+Use animated score updates whenever runs are scored.
+GAME SETTINGS
+Add settings for:
+Sound effects ON/OFF.
+Voice commentary ON/OFF.
+Webcam ON/OFF.
+Bot difficulty: Easy, Medium, Hard.
+Restart match.
+Return to main menu.
+Difficulty should affect the bot's number-selection strategy only if appropriate, without allowing it to cheat by reading the player's current gesture.
+TECHNICAL IMPLEMENTATION
+Build the complete game using React, JavaScript, CSS, and MediaPipe Hands.
+Requirements:
+Real-time webcam hand recognition.
+Responsive desktop and mobile design.
+Smooth transitions and animations.
+Correct game-state management.
+Random bot number generation.
+Simultaneous number selection.
+Accurate toss calculations.
+Accurate cricket scoring.
+Proper innings switching.
+Correct target-chasing logic.
+Complete win, loss, and tie conditions.
+IMPORTANT: During every toss and cricket turn, the bot must select its number independently before the player's number is revealed. Do not reveal the bot's number early.
+FINAL REQUIREMENT
+Deliver a complete and functional Odd-Even Hand Cricket game against an AI bot.
+The game must follow this exact sequence:
+HOME SCREEN → CHOOSE ODD/EVEN → TOSS → TOSS RESULT → BAT/BOWL DECISION → FIRST INNINGS → SECOND INNINGS → MATCH RESULT.
+The nine custom hand gestures must work throughout the toss and both innings.
+Do not create just a mockup or a static interface. All buttons, webcam recognition, bot decisions, scoring, innings transitions, and match results must actually work.
+Make the game entertaining, competitive, visually polished, and similar in excitement to playing hand cricket with a friend.
+Model 11:45 AM
+ThinkingThoughts
+Assessing The Context
+I've been reviewing the initial prompt. I see that there are limited tools, specifically only google:search. It appears I must provide a self-contained, complete response, given the available resources. I am focusing on making the response appropriate for this context.
+Analyzing Library Choices
+I've been examining the library choices for this project, particularly comparing @mediapipe/tasks-vision and @mediapipe/hands. The prompt mentions specifically using MediaPipe Hands. However, I noticed that @mediapipe/tasks-vision offers the HandLandmarker, which I understand is the updated version.
+Evaluating Package Integration
+I'm now focusing on ensuring reliable integration with both Vite and CRA, as well as standalone HTML. I'm exploring @mediapipe/hands through CDN script tags and @mediapipe/tasks-vision via npm or CDN. My goal is a complete React project structure, including a modular setup for gesture recognition, sound, and bot AI to simplify the process.
+Prioritizing Project Structure
+I'm now zeroing in on project output. While @mediapipe/hands had bundling troubles, @mediapipe/tasks-vision's ES module compatibility, both in Vite and via CDN, is promising. I'm exploring the best output format: a full React + Vite project and a zero-setup, standalone index.html. Given the prompt's request for a complete React game, a modular React + Vite structure seems most sensible, with guidance on setup.
+Verifying Code Loading
+I'm now focused on verifying that both MediaPipe Hands libraries load without issues. I'm checking the CDN script tag method for @mediapipe/hands and the npm package approach for @mediapipe/tasks-vision within a Vite project. I'm specifically confirming the snippet from May 2026 for Tasks Vision, and the standard landmarks in the Landmarker. I'm also preparing for a full, error-free React + Vite codebase example.
+Defining Gesture Algorithm
+I'm now fully immersed in designing a robust custom hand gesture recognition algorithm. The plan is to create accurate geometric recognition for numbers 1-9, accommodating for left and right hands, various rotations, hand sizes, and webcam mirroring. I'm focusing on each specific gesture—like single raised fingers—to ensure reliable identification.
+Calculating Gesture Geometries
+I'm now determining geometric invariants for specific hand gestures, targeting robust and scalable recognition. I'm focusing on defining geometric recognition for hand gestures representing numbers 1-9. I'm establishing geometric analysis using 21 MediaPipe landmarks to calculate scale and left/right-hand invariance. The handSize will be determined by the distance between landmark 0 and landmark 9.
+Refining Gesture Metrics
+I'm now refining the gesture recognition algorithm, specifically focusing on rotation-invariant finger extension metrics. I've realized that simply comparing tip.y and pip.y isn't sufficient for accurate detection, as hand tilt significantly impacts the results. My approach involves calculating distances between the wrist and the tip, PIP, and MCP landmarks to determine finger extension, ensuring that the algorithm accounts for various hand orientations. I'm also planning to incorporate the aspect ratio of the video feed to normalize Euclidean distances.
+Determining Finger Status
+I'm now zeroing in on an improved approach for determining finger extension status, using distance and angle metrics. My current thinking utilizes normalized vectors between landmarks and dot products to define "isExtended" and "isFolded" states. I'm focusing on refining the thresholds for these conditions to ensure accuracy for various hand positions. I'm considering integrating palmSize for a more accurate result.
+Validating Finger States
+I'm now zeroing in on validating finger states. To differentiate clearly extended versus folded states, I'm considering specific conditions: A "clearly extended" state will be defined by dist(0, tip) > dist(0, pip) * 1.14 AND dot(v1, v2) > 0.50, while "clearly folded" can be dist(0, tip) < dist(0, pip) * 1.06 OR dot(v1, v2) < 0.15. I'm using null for ambiguous states.
+Now I am ready to move to thumb detection.
+Defining Thumb Geometries
+I'm now determining reliable thumb gesture geometries, specifically distinguishing "raised" from "folded" positions for both left and right hands. I'm focusing on the thumb landmarks (1, 2, 3, 4) and palm landmarks (0, 5, 9, 13, 17). My current strategy involves using distance metrics and thresholds to determine if the thumb is tucked across the palm.
+Analyzing Thumb Geometries
+I'm now analyzing thumb gesture geometries with a focus on distinguishing "raised" and "folded" states, using various distance metrics. I'm exploring conditions like the thumb-to-palm distance (dist(4, 5)) relative to palm size, as well as checking the thumb's straightness using vectors (vT1, vT2). The core question is: what values should be thresholds?
+Refining Thumb States
+I'm now refining thumb gesture recognition and considering specific conditions to distinguish a "folded" thumb. I'm focusing on distance metrics between thumb landmarks (4) and palm landmarks (5, 9, 13, 17). I'm looking at conditions where dist(4, 9) is less than 0.65 * palmSize OR dist(4, 13) is less than 0.72 * palmSize.
+Validating Thumb Positions
+I'm now zeroing in on validating thumb positions. Considering the thumb-across-palm scenario, I'm focusing on distance relationships. I'm focusing on distances between thumb tip (4) and landmarks 9, 13 and 17, and also looking at thumb landmarks (2) relative to landmarks 9 and 17. The core question is: which values constitute robust thresholds? I'm going to test some values I derived.
+Determining Thumb Tilt
+I'm now determining thumb tilt, distinguishing "thumbs up" from "thumbs down." My current hypothesis involves analyzing the vertical displacement (dy) of the thumb tip (4) relative to thumb MCP (2) and using the hand's aspect ratio to adjust horizontal displacement. I am focused on the vector direction between thumb tip (4) and thumb MCP (2) to distinguish the gesture. The plan is to look at Thumb Up and Thumb Down gestures to compare the results with the new method.
+Defining Thumb Orientation
+I'm now zeroing in on defining precise conditions for thumb orientation, specifically "thumbs up" and "thumbs down" gestures, and exploring how to apply and test them. I'm leveraging the normalized vector between the thumb tip (4) and thumb MCP (2) and its vertical displacement (dy) to determine tilt. I'm focusing on validating tilt angles and verifying how this influences other gesture classifications, particularly distinguishing between gestures with an open thumb versus a closed thumb.
+Detecting Finger Contact
+I'm now focused on how to detect when the index and middle fingers are touching for gesture "9". The core idea involves analyzing distances between finger tips (8 and 12) and also the DIPs (7 and 11), normalized by palmSize. Comparing distances like dist(8, 12) to dist(5, 9) will give a reliable result! The value dist(5,9) is the base distance between index and middle fingers.
+Verifying Finger Contact
+I'm now zeroing in on verifying the finger contact between index and middle fingers. I'm focusing on defining a touchRatio (dist(8,12) / dist(5,9)). If it is less than 1.15 and also dist(7,11) < 1.15 * dist(5,9), the fingers are touching, because two fingers pressed together have approximately the same center-to-center distance as the MCP knuckles. If it exceeds 1.5, fingers are open.
+Validating Gesture Logic
+I'm now zeroing in on validating the comprehensive gesture recognition logic and ensuring clarity with edge cases. I'm focusing on validating several combined gestures, and double-checking that there is zero ambiguity. For instance, I'm verifying the combinations for numbers 1 through 7, as well as checking the gestures with invalid input, like a closed fist.
+Implementing Gesture Stability
+I'm now implementing stability filtering to enhance gesture recognition accuracy and user experience. My plan is to have a buffer of the last several recognized numbers, requiring a sustained match for confirmation. MediaPipe's frame rate will determine the duration, with an allowance for minor inconsistencies to avoid frustration.
+Designing Turn Sequencing
+I'm now designing the turn-by-turn sequence for hand cricket, focusing on clear phases. The current plan includes a waiting phase for gesture selection with a stability meter. Upon lock, the bot's number is revealed and both numbers are compared to calculate score for each ball.
+Refining Turn Dynamics
+I'm now refining the turn dynamics for the cricket game, ensuring a seamless flow and preventing accidental double-triggers. I'm focusing on the reveal phase to synchronize the player's locked number with the bot's pre-selected number, including a simultaneous reveal animation, sound effects, and score callouts, and also to add a cooldown for the next play.
+Reviewing Game Requirements
+I'm now methodically reviewing all the game's requirements to ensure comprehensive coverage. I'm focusing on features, from gesture recognition and game mechanics to UI/UX and fallback functionalities, to ensure that I've accounted for every detail, including the Webcam OFF mode, gesture pad and game flow. I must confirm I haven't overlooked any details.
+Designing Game Elements
+I'm now fully immersed in the design of game elements, particularly the home screen. I'm focusing on "ODD EVEN HAND CRICKET" and creating a UI with clear start and help options. I'm prioritizing gesture visuals and considering custom SVG illustrations to guide players. I'm also planning an animated cricket-themed background.
+Clarifying Toss Logic
+I'm now clarifying the toss mechanics, specifically the bot's hidden selection and its implications for the outcome. I've re-read the requirements regarding the bot's random ODD/EVEN choice. It's becoming clear that displaying the bot's choice is contingent on the player's selection and the sum parity, which might make the display weird if the Bot's pick is revealed as "ODD" if the sum is "EVEN".
+Clarifying Toss Strategy
+I'm now clarifying the toss strategy to avoid ambiguity and player confusion, given conflicting requirements. I will implement a random bot choice. I'm focusing on ensuring a consistent and intuitive display based on the rules, especially the implications of revealing the "opposite" choice.
+Clarifying Toss Outcome
+I'm now clarifying the toss outcome logic, resolving the reveal strategy based on strict rule adherence. I'm focusing on ensuring consistency when the bot's toss selection remains hidden until the outcome and display. I'll maintain botTossChoice as random, and determine the winner solely by parity. The reveal will then clearly display the choices and total, clarifying the process.
+Finalizing Toss Mechanics
+I'm now zeroing in on finalizing the toss logic for clarity and accuracy, implementing the specifications faithfully. I'm ensuring the hidden bot choice and parity check, using a dynamic display like sum = ${botNum} + ${playerNum} = ${sum} (${parity}), and providing clear "WIN" or "LOSE" feedback. The code must be correct and meet the design.
+Finalizing Match Logic
+I'm now zeroing in on finalizing the match logic, ensuring clarity and accuracy for Innings 1 and Innings 2, implementing all specifications precisely. I'm focusing on "YOU ARE BATTING" and "BOT IS BATTING" messages, and the comparison with the hand numbers and the score calculation.
+Defining Match Sequences
+I'm now defining the complete match sequence and the result screens to implement innings logic for a full game. I'm building out turn transitions with target (firstInningsScore + 1) and the result screen, based on final score conditions with score comparisons for all scenarios. The result screen will include player and bot final scores, total runs, balls, toss winner, and also a match summary.
+Implementing Bot AI Logic
+I'm now implementing the bot's artificial intelligence. The goal is to make the game engaging, and to avoid "cheating." The crucial challenge is how to adjust the difficulty, given the bot cannot "read" the player's current number. I will focus on historical data to do this, using previous balls, for difficulty levels: Easy will mean uniformly random numbers; Medium, balanced randomness with subtle adaptation to past play; and Hard, smart historical tracking of the player's previous choices.
+Finalizing Game Screens
+I'm now fully immersed in implementing all nine required screens and the match HUD for a complete game experience. I'm prioritizing the exact sequence and design of all screens to ensure a smooth user experience. The screens will be the Home, Rules/Help, Toss Selection, Toss Result, Pre-Match, Turn, Result (Innings 1), Result (Innings 2), and Final Results. I'm focusing on the integration of the dynamic match HUD.
+Designing Game Screens
+I'm now designing all necessary game screens and HUD elements, ensuring intuitive transitions. I'm focusing on screen sequences such as Home, Toss, Innings, and Final Results. I'll include settings, like sounds and commentary (using Web Audio API for sound effects and window.speechSynthesis for voiceovers), and ensure mobile responsiveness.
+Defining Project Deliverables
+I'm now determining the optimal project delivery format for a seamless user experience. My plan is a complete React + Vite project with all files included for immediate execution, including a package.json, index.html, and a well-structured src directory. Key utilities like gesture recognition and game logic will be encapsulated in modular JavaScript files, to allow straightforward integration with the MediaPipe data stream.
+Finalizing Project Files
+I am now organizing all of the files, which include botAI.js, soundEngine.js, StadiumBackground.jsx, HandIcon.jsx, Avatars.jsx, Scoreboard.jsx, WebcamPanel.jsx, and Modals.jsx, into the proper structure. I will double-check MediaPipe libraries and ensure that they are integrated correctly in the WebcamPanel.jsx file.
+Verifying Version Consistency
+I'm now zeroing in on verifying the version consistency between the MediaPipe Tasks Vision package and the WASM path for the CDN. I'm ensuring there are no mismatches which cause runtime errors. Pinning the npm package and matching the WASM path appears to be the safest approach. I need to make sure the package and the CDN version are consistent.
+Validating Webcam Integration
+I'm now implementing automatic fallback to CPU processing if GPU delegation fails, ensuring broad browser compatibility. I'm focusing on strictly monotonic timestamps and the video.readyState for accurate detectForVideo calls. Finally, I'm integrating webcam mirroring to align with the user's perception of their hand movements.
+Confirming Mirroring Robustness
+I'm verifying that mirroring the webcam feed does not affect gesture recognition. The geometric calculations, including distances and dot products within gestureRecognizer.js, are independent of the horizontal orientation of the hand. This ensures the hand game functions as intended, even with mirrored video.
+Refining Gesture Checks
+I'm now refining gesture checks, integrating palmSize for more precise finger extension analysis. The thumb calculations are next. Finger extension is checked by combining distances and angles, and applying these tests to each finger, normalizing to palmSize for consistent results across different hand sizes. I'm focusing on thresholds to improve gesture clarity.
+Refining Thumb Recognition
+I'm now refining thumb gesture recognition logic, drawing upon recent insights. To detect a raised thumb, I'm using d4_9 > d2_9 * 1.05 && d4_17 > d2_17 * 1.03 && d4_5 > palmSize * 0.48 && d2_4 > palmSize * 0.48 && thumbDot > 0.45, or 'raised'. A folded thumb will use d4_9 < d2_9 * 1.01 || d4_17 < d2_17 * 0.99 || d4_5 < palmSize * 0.44 || thumbDot < 0, or 'folded'.
+Refining Thumb States
+I'm now refining and validating the 'folded' thumb state using additional geometric tests. Based on experiments, if a thumb is tucked, the condition should be true; d4_5 < 0.44 * palmSize or d4_9 < d2_9. For a raised thumb in Gesture 5 (all fingers open), it is now verified that d4_5 is ~0.8 * palmSize, d4_9 is ~1.3 * d2_9, and thumbDot is ~0.9. The code is under continuous validation.
+Refining Gesture 9
+I'm now refining the gesture logic for "9", with the index and middle fingers touching and the thumb raised. I will incorporate a check for d4_9 > 1.15 * d2_9, d4_17 > 1.15 * d2_17, d4_5 > 0.55 * palmSize for raised thumb. The method also accounts for thumb orientation, and checks for index and middle finger contact with tip and DIP gaps.
+Finalizing Gesture Logic
+I'm now implementing the final gesture logic, including the disambiguation strategy. My implementation involves returning a null number with a specific reason string, such as "Hold gesture clearly", when a gesture is ambiguous. If the gesture is clear, a thumb folded condition is resolved, and then a thumb raised condition, which allows me to detect gestures from 1 to 9.
+Refining Game Flow
+I'm now integrating helpful UI prompts for gesture clarity, such as "Touch Index & Middle together for 9!", or "Point thumb UP (6) or DOWN (7)". In addition, I'm now also focusing on verifying game state transitions in App.jsx to prevent race conditions. The goal is now to ensure a smooth game flow, and zero double-counted balls.
+Sequencing Game Turns
+I'm now implementing the turn sequence logic. My focus is on the turnPhase state to control gameplay. I'm verifying the states WAITING, REVEALING, TOSS_PLAY, and INNINGS_1 or INNINGS_2, to make transitions smooth. My objective is to prevent unintended triggers, and ensure that both player and bot numbers are revealed simultaneously, followed by commentary and score updates.
+Refining Game State Handling
+I'm now refining the game state transitions and event handling, particularly focusing on how to prevent race conditions during screen changes or restarts. I'm focusing on storing and clearing timeout IDs within a useRef to handle potential stale timers effectively, and integrating proper state management.
+Collapse to hide model thoughts
+
+Below is a complete, fully playable **Odd Even Hand Cricket** game built with **React**, **JavaScript**, **CSS**, and **MediaPipe Hands** (`@mediapipe/tasks-vision` `HandLandmarker`)[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEKLOgZvHqfzAEL_fKYetpIzDCSfmlCAV4R96aXjoGlFopZADr6SaiJ6cdXarNUM0OpB51QDv4yMTi7A-Z_PFee0UpiZtuWWW3VbyQ_OAxuhUBw8f2t0-zhKlSaAeNktDdd_mROSWOIGRaDthDk1EREYKIkPGRSHhai5HESvOUOUOwXCA%3D%3D)].
+
+---
+
+### Project Structure
+
+```text
+odd-even-hand-cricket/
+├── index.html
+├── package.json
+├── vite.config.js
+└── src/
+    ├── main.jsx
+    ├── App.jsx
+    ├── App.css
+    ├── utils/
+    │   ├── gestureRecognizer.js   # Exact 1–9 custom gesture detection + stability filter
+    │   ├── botAI.js               # Independent pre-turn bot selection + Fair difficulty AI
+    │   └── soundEngine.js         # Web Audio API cricket SFX + SpeechSynthesis commentary
+    └── components/
+        ├── StadiumBackground.jsx  # Animated cricket stadium, pitch, scoreboard & floodlights
+        ├── HandIcon.jsx           # Custom SVG illustrations for gestures 1–9
+        ├── Avatars.jsx            # Player & reactive animated Bot cricket avatars
+        ├── Scoreboard.jsx         # Broadcast-style live cricket scoreboard
+        ├── WebcamPanel.jsx        # Real-time MediaPipe webcam tracking + fallback pad
+        └── Modals.jsx             # How to Play guide & Settings panel
+```
+
+---
+
+### 1. `package.json`
+
+```json
+{
+  "name": "odd-even-hand-cricket",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "0.10.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "vite": "^5.4.0"
+  }
+}
+```
+
+### 2. `vite.config.js`
+
+```js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+});
+```
+
+### 3. `index.html`
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ODD EVEN HAND CRICKET — Challenge the Bot!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Teko:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+```
+
+### 4. `src/main.jsx`
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './App.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
+
+---
+
+### 5. `src/utils/gestureRecognizer.js`
+
+Implements the exact 1–9 custom mapping, supports left and right hands, checks all 5 fingers, detects upward/downward thumb orientation (6 & 7), detects touching index & middle fingers (9), ignores invalid/ambiguous gestures, and enforces frame stability before confirming.
+
+```js
+// Exact Custom Gesture Mapping (1–9):
+// 1: Any 1 of 4 fingers raised, thumb folded
+// 2: Any 2 of 4 fingers raised, thumb folded
+// 3: Any 3 of 4 fingers raised, thumb folded
+// 4: All 4 fingers raised, thumb folded
+// 5: All 5 fingers raised, including thumb
+// 6: Only thumb raised and pointing upward
+// 7: Only thumb raised and pointing downward
+// 8: Thumb and index finger raised
+// 9: Thumb, index and middle fingers raised, with index and middle fingers touching
+
+export const GESTURE_DESCRIPTIONS = {
+  1: 'Any 1 of 4 fingers up, thumb folded',
+  2: 'Any 2 of 4 fingers up, thumb folded',
+  3: 'Any 3 of 4 fingers up, thumb folded',
+  4: 'All 4 fingers up, thumb folded',
+  5: 'All 5 fingers open (with thumb)',
+  6: 'Only thumb up (pointing upward)',
+  7: 'Only thumb down (pointing downward)',
+  8: 'Thumb + Index finger up',
+  9: 'Thumb + Index & Middle touching',
+};
+
+function pt(lm, idx, aspectRatio) {
+  return {
+    x: lm[idx].x * aspectRatio,
+    y: lm[idx].y,
+    z: lm[idx].z || 0,
+  };
+}
+
+function dist(a, b) {
+  return Math.hypot(a.x - b.x, a.y - b.y);
+}
+
+function sub(a, b) {
+  return { x: a.x - b.x, y: a.y - b.y };
+}
+
+function normalize(v) {
+  const len = Math.hypot(v.x, v.y) || 1e-6;
+  return { x: v.x / len, y: v.y / len };
+}
+
+function dot(a, b) {
+  return a.x * b.x + a.y * b.y;
+}
+
+function classifyFinger(lm, mcpIdx, pipIdx, dipIdx, tipIdx, palmSize, aspectRatio) {
+  const wrist = pt(lm, 0, aspectRatio);
+  const mcp = pt(lm, mcpIdx, aspectRatio);
+  const pip = pt(lm, pipIdx, aspectRatio);
+  const tip = pt(lm, tipIdx, aspectRatio);
+
+  const dWristTip = dist(wrist, tip);
+  const dWristPip = dist(wrist, pip);
+  const dWristMcp = dist(wrist, mcp);
+  const dMcpTip = dist(mcp, tip);
+
+  const v1 = normalize(sub(pip, mcp));
+  const v2 = normalize(sub(tip, pip));
+  const straightDot = dot(v1, v2);
+
+  const isExtended =
+    dWristTip > dWristPip * 1.11 &&
+    dWristTip > dWristMcp * 1.24 &&
+    straightDot > 0.42 &&
+    dMcpTip > palmSize * 0.42;
+
+  const isFolded =
+    dWristTip < dWristPip * 1.06 ||
+    straightDot < 0.18 ||
+    dMcpTip < palmSize * 0.42;
+
+  if (isExtended && !isFolded) return 'extended';
+  if (isFolded && !isExtended) return 'folded';
+  return 'ambiguous';
+}
+
+function classifyThumb(lm, palmSize, aspectRatio) {
+  const mcp = pt(lm, 2, aspectRatio);
+  const ip = pt(lm, 3, aspectRatio);
+  const tip = pt(lm, 4, aspectRatio);
+  const indexMcp = pt(lm, 5, aspectRatio);
+  const middleMcp = pt(lm, 9, aspectRatio);
+  const pinkyMcp = pt(lm, 17, aspectRatio);
+
+  const v1 = normalize(sub(ip, mcp));
+  const v2 = normalize(sub(tip, ip));
+  const straightDot = dot(v1, v2);
+
+  const dTipMiddle = dist(tip, middleMcp);
+  const dMcpMiddle = dist(mcp, middleMcp);
+  const dTipPinky = dist(tip, pinkyMcp);
+  const dMcpPinky = dist(mcp, pinkyMcp);
+  const dTipIndex = dist(tip, indexMcp);
+  const dMcpTip = dist(mcp, tip);
+
+  const isRaised =
+    dTipMiddle > dMcpMiddle * 1.05 &&
+    dTipPinky > dMcpPinky * 1.03 &&
+    dTipIndex > palmSize * 0.48 &&
+    dMcpTip > palmSize * 0.46 &&
+    straightDot > 0.44;
+
+  const isFolded =
+    dTipMiddle < dMcpMiddle * 1.01 ||
+    dTipPinky < dMcpPinky * 0.99 ||
+    dTipIndex < palmSize * 0.44 ||
+    straightDot < 0.22;
+
+  // Vertical direction in normalized image space (y increases downward)
+  const dx = tip.x - mcp.x;
+  const dy = tip.y - mcp.y;
+  let direction = 'side';
+  if (dy < 0 && Math.abs(dy) > Math.abs(dx) * 0.9 && tip.y < ip.y) {
+    direction = 'up';
+  } else if (dy > 0 && dy > Math.abs(dx) * 0.9 && tip.y > ip.y) {
+    direction = 'down';
+  }
+
+  let state = 'ambiguous';
+  if (isRaised && !isFolded) state = 'raised';
+  else if (isFolded && !isRaised) state = 'folded';
+
+  return { state, direction };
+}
+
+/**
+ * Analyzes 21 MediaPipe hand landmarks and returns:
+ * { number: 1..9 | null, hint: string, fingers: { thumb, index, middle, ring, pinky } }
+ */
+export function recognizeCustomHandGesture(landmarks, aspectRatio = 4 / 3) {
+  if (!landmarks || landmarks.length < 21) {
+    return { number: null, hint: 'Show your hand to camera', fingers: null };
+  }
+
+  const wrist = pt(landmarks, 0, aspectRatio);
+  const middleMcp = pt(landmarks, 9, aspectRatio);
+  const palmSize = dist(wrist, middleMcp);
+
+  if (palmSize < 0.04) {
+    return { number: null, hint: 'Move hand closer', fingers: null };
+  }
+
+  const thumb = classifyThumb(landmarks, palmSize, aspectRatio);
+  const index = classifyFinger(landmarks, 5, 6, 7, 8, palmSize, aspectRatio);
+  const middle = classifyFinger(landmarks, 9, 10, 11, 12, palmSize, aspectRatio);
+  const ring = classifyFinger(landmarks, 13, 14, 15, 16, palmSize, aspectRatio);
+  const pinky = classifyFinger(landmarks, 17, 18, 19, 20, palmSize, aspectRatio);
+
+  const fingers = {
+    thumb: thumb.state,
+    thumbDir: thumb.direction,
+    index,
+    middle,
+    ring,
+    pinky,
+  };
+
+  // Reject if any finger is in an ambiguous half-bent position
+  if (
+    thumb.state === 'ambiguous' ||
+    index === 'ambiguous' ||
+    middle === 'ambiguous' ||
+    ring === 'ambiguous' ||
+    pinky === 'ambiguous'
+  ) {
+    return { number: null, hint: 'Hold fingers clearly open or folded', fingers };
+  }
+
+  const fourFingers = [index, middle, ring, pinky];
+  const raisedCount = fourFingers.filter((s) => s === 'extended').length;
+
+  // Case A: Thumb FOLDED -> 1, 2, 3, or 4
+  if (thumb.state === 'folded') {
+    if (raisedCount >= 1 && raisedCount <= 4) {
+      return {
+        number: raisedCount,
+        hint: `Gesture ${raisedCount} detected`,
+        fingers,
+      };
+    }
+    return { number: null, hint: 'Closed fist ignored — show 1 to 9', fingers };
+  }
+
+  // Case B: Thumb RAISED -> 5, 6, 7, 8, or 9
+  if (thumb.state === 'raised') {
+    // 5: All 5 fingers raised
+    if (raisedCount === 4) {
+      return { number: 5, hint: 'Gesture 5 detected', fingers };
+    }
+
+    // 6 or 7: Only thumb raised (upward or downward)
+    if (raisedCount === 0) {
+      if (thumb.direction === 'up') {
+        return { number: 6, hint: 'Gesture 6 (Thumb Up) detected', fingers };
+      }
+      if (thumb.direction === 'down') {
+        return { number: 7, hint: 'Gesture 7 (Thumb Down) detected', fingers };
+      }
+      return {
+        number: null,
+        hint: 'Point thumb straight UP (6) or DOWN (7)',
+        fingers,
+      };
+    }
+
+    // 8: Thumb and Index raised
+    if (raisedCount === 1 && index === 'extended') {
+      return { number: 8, hint: 'Gesture 8 detected', fingers };
+    }
+
+    // 9: Thumb, Index, and Middle raised WITH Index & Middle touching
+    if (raisedCount === 2 && index === 'extended' && middle === 'extended') {
+      const idxTip = pt(landmarks, 8, aspectRatio);
+      const midTip = pt(landmarks, 12, aspectRatio);
+      const idxDip = pt(landmarks, 7, aspectRatio);
+      const midDip = pt(landmarks, 11, aspectRatio);
+      const idxMcp = pt(landmarks, 5, aspectRatio);
+      const midMcp = pt(landmarks, 9, aspectRatio);
+
+      const knuckleSpan = Math.max(dist(idxMcp, midMcp), palmSize * 0.18);
+      const tipGapRatio = dist(idxTip, midTip) / knuckleSpan;
+      const dipGapRatio = dist(idxDip, midDip) / knuckleSpan;
+
+      const areTouching =
+        tipGapRatio < 1.35 &&
+        dipGapRatio < 1.35 &&
+        dist(idxTip, midTip) < palmSize * 0.38;
+
+      if (areTouching) {
+        return { number: 9, hint: 'Gesture 9 (Touching) detected', fingers };
+      }
+      return {
+        number: null,
+        hint: 'Touch Index & Middle fingers together for 9',
+        fingers,
+      };
+    }
+
+    return {
+      number: null,
+      hint: 'Invalid finger combo — check gesture guide',
+      fingers,
+    };
+  }
+
+  return { number: null, hint: 'Adjust hand pose', fingers };
+}
+
+/**
+ * Temporal stability tracker so transient hand motion never triggers false locks.
+ */
+export class GestureStabilityTracker {
+  constructor(requiredMs = 750) {
+    this.requiredMs = requiredMs;
+    this.candidate = null;
+    this.startTime = 0;
+    this.missCount = 0;
+  }
+
+  reset() {
+    this.candidate = null;
+    this.startTime = 0;
+    this.missCount = 0;
+  }
+
+  update(detectedNumber, now = performance.now()) {
+    if (detectedNumber === null) {
+      this.missCount += 1;
+      if (this.missCount > 3) {
+        this.reset();
+      }
+      return {
+        stableNumber: null,
+        candidate: this.candidate,
+        progress: this.candidate
+          ? Math.min(0.99, (now - this.startTime) / this.requiredMs)
+          : 0,
+      };
+    }
+
+    this.missCount = 0;
+
+    if (detectedNumber !== this.candidate) {
+      this.candidate = detectedNumber;
+      this.startTime = now;
+      return { stableNumber: null, candidate: this.candidate, progress: 0.05 };
+    }
+
+    const elapsed = now - this.startTime;
+    const progress = Math.min(1, elapsed / this.requiredMs);
+
+    if (elapsed >= this.requiredMs) {
+      return { stableNumber: this.candidate, candidate: this.candidate, progress: 1 };
+    }
+
+    return { stableNumber: null, candidate: this.candidate, progress };
+  }
+}
+```
+
+---
+
+### 6. `src/utils/botAI.js`
+
+Guarantees the bot picks its number **independently before** the player's gesture is confirmed or revealed. Difficulty (`easy`, `medium`, `hard`) adjusts statistical weighting from *previously completed* balls and match situation without ever reading the current gesture.
+
+```js
+export function pickBotTossCall() {
+  return Math.random() < 0.5 ? 'ODD' : 'EVEN';
+}
+
+export function pickBotBatOrBowl(difficulty = 'medium') {
+  // Sensible strategy: chasing gives clarity, batting first builds scoreboard pressure
+  const chaseBias = difficulty === 'hard' ? 0.62 : difficulty === 'medium' ? 0.52 : 0.45;
+  return Math.random() < chaseBias ? 'BOWL' : 'BAT';
+}
+
+/**
+ * Picks a random number 1..9 independently of the player's current turn.
+ * @param {object} ctx
+ * @param {'easy'|'medium'|'hard'} ctx.difficulty
+ * @param {'TOSS'|'BATTING'|'BOWLING'} ctx.role
+ * @param {number[]} ctx.playerPastNumbers - Strictly past completed balls only
+ * @param {number|null} ctx.runsNeeded
+ */
+export function selectBotNumber({
+  difficulty = 'medium',
+  role = 'TOSS',
+  playerPastNumbers = [],
+  runsNeeded = null,
+}) {
+  // Base equal weights for 1..9
+  const weights = Array(9).fill(1);
+
+  if (role === 'TOSS') {
+    // Purely uniform 1..9 for toss
+    return Math.floor(Math.random() * 9) + 1;
+  }
+
+  if (difficulty === 'easy') {
+    // Slightly favors lower/classic numbers, completely random
+    for (let i = 0; i < 6; i++) weights[i] = 1.15;
+  } else if (difficulty === 'medium' || difficulty === 'hard') {
+    if (role === 'BATTING') {
+      // Smart chase logic when bot knows the exact runs needed
+      if (runsNeeded !== null && runsNeeded > 0) {
+        if (runsNeeded <= 4) {
+          // Prefer safer low numbers to seal the chase
+          for (let n = 1; n <= Math.min(6, runsNeeded + 1); n++) {
+            weights[n - 1] += difficulty === 'hard' ? 1.4 : 0.7;
+          }
+        } else if (runsNeeded >= 12) {
+          // Push scoring rate with bigger shots
+          for (let n = 6; n <= 9; n++) {
+            weights[n - 1] += difficulty === 'hard' ? 1.2 : 0.6;
+          }
+        }
+      }
+      // Avoid repeating numbers the player bowled frequently in past balls
+      if (difficulty === 'hard' && playerPastNumbers.length >= 2) {
+        const recent = playerPastNumbers.slice(-4);
+        recent.forEach((n) => {
+          weights[n - 1] = Math.max(0.45, weights[n - 1] - 0.28);
+        });
+      }
+    } else if (role === 'BOWLING') {
+      // Analyze player's historical favorites from completed balls only
+      const lookback = difficulty === 'hard' ? 6 : 3;
+      const boost = difficulty === 'hard' ? 0.55 : 0.25;
+      const recent = playerPastNumbers.slice(-lookback);
+      recent.forEach((n) => {
+        weights[n - 1] += boost;
+      });
+    }
+  }
+
+  const total = weights.reduce((acc, w) => acc + w, 0);
+  let r = Math.random() * total;
+  for (let i = 0; i < 9; i++) {
+    r -= weights[i];
+    if (r <= 0) return i + 1;
+  }
+  return Math.floor(Math.random() * 9) + 1;
+}
+
+const QUIPS = {
+  botScoredBig: [
+    'BOOM! Cleared the floodlights!',
+    'Maximum power! Try stopping that one!',
+    'Pure timing! Straight over long-on!',
+    'That ball is still orbiting the stadium!',
+  ],
+  botScoredSmall: [
+    'Rotating the strike nicely.',
+    'Smart cricket, keeping the board ticking.',
+    'Quick single-style nudges add up!',
+  ],
+  botOut: [
+    'WAIT WHAT?! How did you read my circuits?!',
+    'Nooo! Right into the stumps!',
+    'Glitch in my batting matrix... well bowled!',
+  ],
+  botTookWicket: [
+    'CLEAN BOWLED! Walk back to the pavilion!',
+    'Read you like an open playbook! OUT!',
+    'Timber!! Stumps flying everywhere!',
+  ],
+  botMissedWicket: [
+    'So close! Missed the edge by a millimeter!',
+    'Good shot. Next ball has your name on it!',
+    'Wait till my next delivery!',
+  ],
+  botWonToss: [
+    'Toss champion! My probability core never lies.',
+    'Luck and logic on my side today!',
+  ],
+  botLostToss: [
+    'Enjoy the toss — the match is where I shine!',
+    'Fair call! Let’s see how you handle the pitch.',
+  ],
+};
+
+export function getBotReaction(eventType) {
+  const list = QUIPS[eventType] || ['Ready for the next delivery!'];
+  return list[Math.floor(Math.random() * list.length)];
+}
+```
+
+---
+
+### 7. `src/utils/soundEngine.js`
+
+Zero external audio asset dependencies—uses Web Audio API synthesis for crisp bat cracks, crowd roars, wicket shatters, coin tosses, and UI clicks, plus optional `speechSynthesis` commentary.
+
+```js
+class SoundEngine {
+  constructor() {
+    this.ctx = null;
+    this.sfxEnabled = true;
+    this.voiceEnabled = true;
+  }
+
+  getContext() {
+    if (!this.ctx && typeof window !== 'undefined') {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtx) this.ctx = new AudioCtx();
+    }
+    if (this.ctx && this.ctx.state === 'suspended') {
+      this.ctx.resume().catch(() => {});
+    }
+    return this.ctx;
+  }
+
+  setSettings({ sfxEnabled, voiceEnabled }) {
+    this.sfxEnabled = sfxEnabled;
+    this.voiceEnabled = voiceEnabled;
+    if (!voiceEnabled && typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+  }
+
+  playTone(freq, duration, type = 'sine', gainVal = 0.14, delay = 0) {
+    if (!this.sfxEnabled) return;
+    const ctx = this.getContext();
+    if (!ctx) return;
+
+    const start = ctx.currentTime + delay;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, start);
+
+    gain.gain.setValueAtTime(0.001, start);
+    gain.gain.exponentialRampToValueAtTime(gainVal, start + 0.015);
+    gain.gain.exponentialRampToValueAtTime(0.001, start + duration);
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(start);
+    osc.stop(start + duration + 0.02);
+  }
+
+  playClick() {
+    this.playTone(620, 0.07, 'triangle', 0.1);
+  }
+
+  playLock() {
+    this.playTone(520, 0.08, 'sine', 0.12, 0);
+    this.playTone(780, 0.11, 'sine', 0.12, 0.06);
+  }
+
+  playBatHit(runs = 4) {
+    if (!this.sfxEnabled) return;
+    // Crisp wooden bat knock
+    this.playTone(210, 0.07, 'triangle', 0.22, 0);
+    this.playTone(130, 0.09, 'sine', 0.2, 0.01);
+
+    if (runs >= 6) {
+      // Big hit cheer arpeggio
+      this.playTone(523.25, 0.14, 'triangle', 0.13, 0.08);
+      this.playTone(659.25, 0.14, 'triangle', 0.13, 0.16);
+      this.playTone(783.99, 0.22, 'triangle', 0.15, 0.24);
+    } else {
+      this.playTone(440, 0.12, 'sine', 0.1, 0.07);
+    }
+  }
+
+  playWicket() {
+    if (!this.sfxEnabled) return;
+    // Dramatic descending timber sound
+    this.playTone(300, 0.12, 'sawtooth', 0.14, 0);
+    this.playTone(190, 0.16, 'sawtooth', 0.15, 0.09);
+    this.playTone(105, 0.35, 'square', 0.14, 0.18);
+  }
+
+  playTossFlip() {
+    if (!this.sfxEnabled) return;
+    this.playTone(880, 0.08, 'sine', 0.11, 0);
+    this.playTone(1174, 0.1, 'sine', 0.11, 0.07);
+    this.playTone(1318, 0.16, 'triangle', 0.13, 0.15);
+  }
+
+  playVictory() {
+    if (!this.sfxEnabled) return;
+    const notes = [523.25, 659.25, 783.99, 1046.5];
+    notes.forEach((n, idx) => {
+      this.playTone(n, 0.24, 'triangle', 0.15, idx * 0.11);
+    });
+  }
+
+  playDefeat() {
+    if (!this.sfxEnabled) return;
+    const notes = [392, 349.23, 311.13, 261.63];
+    notes.forEach((n, idx) => {
+      this.playTone(n, 0.26, 'sawtooth', 0.09, idx * 0.14);
+    });
+  }
+
+  speak(text) {
+    if (!this.voiceEnabled || typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      return;
+    }
+    try {
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.rate = 1.06;
+      utter.pitch = 1.02;
+      utter.volume = 0.85;
+      window.speechSynthesis.speak(utter);
+    } catch {
+      // Ignore speech synthesis errors on restricted browsers
+    }
+  }
+}
+
+export const soundEngine = new SoundEngine();
+```
+
+---
+
+### 8. `src/components/StadiumBackground.jsx`
+
+Animated cricket night stadium with glowing sweeping floodlights, stadium crowd tiers, scoreboard silhouette, boundary ring, and cricket pitch strip.
+
+```jsx
+import React from 'react';
+
+export default function StadiumBackground({ highlight = 'neutral' }) {
+  return (
+    <div className={`stadium-bg stadium-bg--${highlight}`} aria-hidden="true">
+      <div className="stadium-sky-glow" />
+
+      {/* Left & Right Floodlight Towers */}
+      <div className="floodlight-tower floodlight-tower--left">
+        <div className="floodlight-head">
+          <span /><span /><span /><span />
+        </div>
+        <div className="floodlight-beam floodlight-beam--left" />
+      </div>
+
+      <div className="floodlight-tower floodlight-tower--right">
+        <div className="floodlight-head">
+          <span /><span /><span /><span />
+        </div>
+        <div className="floodlight-beam floodlight-beam--right" />
+      </div>
+
+      {/* Distant Stadium Scoreboard Silhouette */}
+      <div className="bg-stadium-scoreboard">
+        <div className="bg-sb-dot" />
+        <span>LIVE STADIUM ARENA</span>
+        <div className="bg-sb-dot" />
+      </div>
+
+      {/* Stadium Bowl & Outfield Pitch */}
+      <div className="stadium-tiers" />
+      <div className="stadium-outfield">
+        <div className="boundary-rope" />
+        <div className="cricket-pitch">
+          <div className="crease-line crease-line--top" />
+          <div className="stumps-mini stumps-mini--top">
+            <span /><span /><span />
+          </div>
+          <div className="crease-line crease-line--bottom" />
+          <div className="stumps-mini stumps-mini--bottom">
+            <span /><span /><span />
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Stadium Particles */}
+      <div className="stadium-particles">
+        <span /><span /><span /><span /><span /><span />
+      </div>
+    </div>
+  );
+}
+```
+
+---
+
+### 9. `src/components/HandIcon.jsx`
+
+Custom SVG hand illustrations strictly matching the 9 custom hand cricket gestures (1–4 folded thumb, 5 open hand, 6 thumb up, 7 thumb down, 8 thumb + index, 9 thumb + index & middle touching).
+
+```jsx
+import React from 'react';
+
+/**
+ * Renders an unmistakable visual diagram of custom gestures 1–9.
+ */
+export default function HandIcon({ number, size = 56, className = '' }) {
+  // Hand geometry helpers inside 100x100 viewBox
+  const renderGesture = () => {
+    switch (number) {
+      case 1:
+        return (
+          <>
+            {/* Palm */}
+            <rect x="30" y="50" width="38" height="34" rx="12" className="hand-fill" />
+            {/* Index up */}
+            <rect x="31" y="14" width="9" height="40" rx="4.5" className="hand-fill hand-active" />
+            {/* Folded middle, ring, pinky */}
+            <rect x="42" y="42" width="8" height="16" rx="4" className="hand-folded" />
+            <rect x="52" y="43" width="8" height="15" rx="4" className="hand-folded" />
+            <rect x="61" y="45" width="7" height="13" rx="3.5" className="hand-folded" />
+            {/* Thumb folded across palm */}
+            <rect x="27" y="57" width="24" height="9" rx="4.5" transform="rotate(-10 27 57)" className="hand-folded" />
+          </>
+        );
+      case 2:
+        return (
+          <>
+            <rect x="30" y="50" width="38" height="34" rx="12" className="hand-fill" />
+            <rect x="31" y="14" width="9" height="40" rx="4.5" className="hand-fill hand-active" />
+            <rect x="43" y="11" width="9" height="43" rx="4.5" className="hand-fill hand-active" />
+            <rect x="54" y="43" width="8" height="15" rx="4" className="hand-folded" />
+            <rect x="63" y="45" width="7" height="13" rx="3.5" className="hand-folded" />
+            <rect x="27" y="57" width="24" height="9" rx="4.5" transform="rotate(-10 27 57)" className="hand-folded" />
+          </>
+        );
+      case 3:
+        return (
+          <>
+            <rect x="29" y="50" width="40" height="34" rx="12" className="hand-fill" />
+            <rect x="30" y="15" width="8.5" height="39" rx="4.2" className="hand-fill hand-active" />
+            <rect x="41" y="11" width="8.5" height="43" rx="4.2" className="hand-fill hand-active" />
+            <rect x="52" y="15" width="8.5" height="39" rx="4.2" className="hand-fill hand-active" />
+            <rect x="62" y="45" width="7" height="13" rx="3.5" className="hand-folded" />
+            <rect x="26" y="57" width="25" height="9" rx="4.5" transform="rotate(-10 26 57)" className="hand-folded" />
+          </>
+        );
+      case 4:
+        return (
+          <>
+            <rect x="29" y="50" width="41" height="34" rx="12" className="hand-fill" />
+            <rect x="30" y="16" width="8.5" height="38" rx="4.2" className="hand-fill hand-active" />
+            <rect x="40.5" y="10" width="8.5" height="44" rx="4.2" className="hand-fill hand-active" />
+            <rect x="51" y="14" width="8.5" height="40" rx="4.2" className="hand-fill hand-active" />
+            <rect x="61.5" y="22" width="8" height="32" rx="4" className="hand-fill hand-active" />
+            <rect x="26" y="57" width="25" height="9" rx="4.5" transform="rotate(-10 26 57)" className="hand-folded" />
+          </>
+        );
+      case 5:
+        return (
+          <>
+            <rect x="32" y="50" width="40" height="34" rx="12" className="hand-fill" />
+            {/* Thumb open */}
+            <rect x="13" y="46" width="23" height="9.5" rx="4.7" transform="rotate(-38 24 52)" className="hand-fill hand-active" />
+            <rect x="33" y="16" width="8.5" height="38" rx="4.2" className="hand-fill hand-active" />
+            <rect x="43.5" y="10" width="8.5" height="44" rx="4.2" className="hand-fill hand-active" />
+            <rect x="54" y="14" width="8.5" height="40" rx="4.2" className="hand-fill hand-active" />
+            <rect x="64" y="22" width="8" height="32" rx="4" className="hand-fill hand-active" />
+          </>
+        );
+      case 6:
+        return (
+          <>
+            {/* Fist sideways with thumb straight UP */}
+            <rect x="34" y="44" width="38" height="36" rx="11" className="hand-fill" />
+            <rect x="34" y="12" width="12" height="36" rx="6" className="hand-fill hand-active" />
+            <line x1="48" y1="53" x2="71" y2="53" className="hand-crease" />
+            <line x1="48" y1="62" x2="71" y2="62" className="hand-crease" />
+            <line x1="48" y1="71" x2="71" y2="71" className="hand-crease" />
+            {/* Up arrow hint */}
+            <path d="M22 30 L22 14 M17 19 L22 14 L27 19" className="hand-arrow" />
+          </>
+        );
+      case 7:
+        return (
+          <>
+            {/* Fist sideways with thumb straight DOWN */}
+            <rect x="34" y="20" width="38" height="36" rx="11" className="hand-fill" />
+            <rect x="34" y="52" width="12" height="36" rx="6" className="hand-fill hand-active" />
+            <line x1="48" y1="29" x2="71" y2="29" className="hand-crease" />
+            <line x1="48" y1="38" x2="71" y2="38" className="hand-crease" />
+            <line x1="48" y1="47" x2="71" y2="47" className="hand-crease" />
+            {/* Down arrow hint */}
+            <path d="M22 70 L22 86 M17 81 L22 86 L27 81" className="hand-arrow" />
+          </>
+        );
+      case 8:
+        return (
+          <>
+            <rect x="34" y="48" width="36" height="34" rx="12" className="hand-fill" />
+            {/* Thumb out */}
+            <rect x="13" y="47" width="25" height="9.5" rx="4.7" transform="rotate(-32 25 53)" className="hand-fill hand-active" />
+            {/* Index up */}
+            <rect x="36" y="13" width="9.5" height="39" rx="4.7" className="hand-fill hand-active" />
+            {/* Middle, ring, pinky folded */}
+            <rect x="48" y="42" width="7.5" height="14" rx="3.7" className="hand-folded" />
+            <rect x="57" y="44" width="7.5" height="13" rx="3.7" className="hand-folded" />
+            <rect x="65" y="46" width="6.5" height="11" rx="3.2" className="hand-folded" />
+          </>
+        );
+      case 9:
+        return (
+          <>
+            <rect x="34" y="48" width="37" height="34" rx="12" className="hand-fill" />
+            {/* Thumb out */}
+            <rect x="13" y="47" width="25" height="9.5" rx="4.7" transform="rotate(-32 25 53)" className="hand-fill hand-active" />
+            {/* Index & Middle UP and TOUCHING side-by-side */}
+            <rect x="37" y="13" width="9" height="39" rx="4.5" className="hand-fill hand-active" />
+            <rect x="46.5" y="11" width="9" height="41" rx="4.5" className="hand-fill hand-active" />
+            {/* Touching highlight ring */}
+            <circle cx="46.2" cy="19" r="5.5" className="hand-touch-ring" />
+            {/* Ring, pinky folded */}
+            <rect x="57" y="44" width="7.5" height="13" rx="3.7" className="hand-folded" />
+            <rect x="65" y="46" width="6.5" height="11" rx="3.2" className="hand-folded" />
+          </>
+        );
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 100 100"
+      className={`hand-icon ${className}`}
+      aria-label={`Gesture ${number}`}
+    >
+      {renderGesture()}
+    </svg>
+  );
+}
+```
+
+---
+
+### 10. `src/components/Avatars.jsx`
+
+Animated Player and AI Bot cricket avatars with live expressions (`neutral`, `thinking`, `happy`, `surprised`, `confident`, `disappointed`) and role badges.
+
+```jsx
+import React from 'react';
+
+export function PlayerAvatar({ isBatting, statusText }) {
+  return (
+    <div className={`avatar-card avatar-card--player ${isBatting ? 'is-batting' : ''}`}>
+      <div className="avatar-badge">
+        {isBatting === true ? '🏏 BATTING' : isBatting === false ? '⚾ BOWLING' : '⚡ CHALLENGER'}
+      </div>
+      <div className="avatar-visual">
+        <svg viewBox="0 0 100 100" className="avatar-svg">
+          {/* Helmet */}
+          <path d="M22 48 C22 22, 78 22, 78 48 L78 58 L22 58 Z" fill="#0ea5e9" />
+          <path d="M20 46 L82 46 L86 52 L20 52 Z" fill="#0284c7" />
+          {/* Face */}
+          <circle cx="50" cy="58" r="21" fill="#f3c6a5" />
+          {/* Helmet Grille */}
+          <path d="M28 58 L72 58 M31 66 L69 66 M36 74 L64 74" stroke="#cbd5e1" strokeWidth="2.5" strokeLinecap="round" />
+          {/* Eyes */}
+          <circle cx="42" cy="54" r="2.6" fill="#0f172a" />
+          <circle cx="58" cy="54" r="2.6" fill="#0f172a" />
+          {/* Jersey */}
+          <path d="M24 98 C24 80, 76 80, 76 98 Z" fill="#0284c7" />
+        </svg>
+      </div>
+      <div className="avatar-name">YOU</div>
+      {statusText && <div className="avatar-status">{statusText}</div>}
+    </div>
+  );
+}
+
+export function BotAvatar({
+  expression = 'neutral',
+  isBatting,
+  quip,
+  difficulty = 'medium',
+}) {
+  const renderEyesAndMouth = () => {
+    switch (expression) {
+      case 'happy':
+        return (
+          <>
+            <path d="M35 50 Q40 43 45 50" stroke="#34d399" strokeWidth="3.5" fill="none" strokeLinecap="round" />
+            <path d="M55 50 Q60 43 65 50" stroke="#34d399" strokeWidth="3.5" fill="none" strokeLinecap="round" />
+            <path d="M40 62 Q50 71 60 62" stroke="#34d399" strokeWidth="3.2" fill="none" strokeLinecap="round" />
+          </>
+        );
+      case 'surprised':
+        return (
+          <>
+            <circle cx="40" cy="48" r="5" fill="#fbbf24" />
+            <circle cx="60" cy="48" r="5" fill="#fbbf24" />
+            <circle cx="50" cy="64" r="4.5" stroke="#fbbf24" strokeWidth="3" fill="none" />
+          </>
+        );
+      case 'confident':
+        return (
+          <>
+            <path d="M34 45 L46 49" stroke="#22d3ee" strokeWidth="3.5" strokeLinecap="round" />
+            <path d="M66 45 L54 49" stroke="#22d3ee" strokeWidth="3.5" strokeLinecap="round" />
+            <circle cx="40" cy="51" r="2.5" fill="#22d3ee" />
+            <circle cx="60" cy="51" r="2.5" fill="#22d3ee" />
+            <path d="M41 63 Q52 67 61 60" stroke="#22d3ee" strokeWidth="3" fill="none" strokeLinecap="round" />
+          </>
+        );
+      case 'disappointed':
+        return (
+          <>
+            <path d="M35 48 L45 52 M45 48 L35 52" stroke="#f87171" strokeWidth="2.8" strokeLinecap="round" />
+            <path d="M55 48 L65 52 M65 48 L55 52" stroke="#f87171" strokeWidth="2.8" strokeLinecap="round" />
+            <path d="M40 67 Q50 59 60 67" stroke="#f87171" strokeWidth="3" fill="none" strokeLinecap="round" />
+          </>
+        );
+      case 'thinking':
+        return (
+          <>
+            <circle cx="40" cy="49" r="3.2" fill="#a78bfa" />
+            <circle cx="60" cy="49" r="3.2" fill="#a78bfa" />
+            <line x1="42" y1="63" x2="58" y2="63" stroke="#a78bfa" strokeWidth="3" strokeLinecap="round" />
+          </>
+        );
+      default:
+        return (
+          <>
+            <circle cx="40" cy="49" r="3.5" fill="#38bdf8" />
+            <circle cx="60" cy="49" r="3.5" fill="#38bdf8" />
+            <path d="M42 63 Q50 67 58 63" stroke="#38bdf8" strokeWidth="3" fill="none" strokeLinecap="round" />
+          </>
+        );
+    }
+  };
+
+  return (
+    <div className={`avatar-card avatar-card--bot expr-${expression} ${isBatting ? 'is-batting' : ''}`}>
+      <div className="avatar-badge">
+        {isBatting === true ? '🏏 BATTING' : isBatting === false ? '⚾ BOWLING' : `🤖 ${difficulty.toUpperCase()} AI`}
+      </div>
+      <div className="avatar-visual">
+        <svg viewBox="0 0 100 100" className="avatar-svg">
+          {/* Antenna */}
+          <line x1="50" y1="8" x2="50" y2="20" stroke="#94a3b8" strokeWidth="3" />
+          <circle cx="50" cy="7" r="4" fill="#fbbf24" className="bot-antenna-pulse" />
+          {/* Cricket Cap / Helmet */}
+          <path d="M24 34 C24 18, 76 18, 76 34 Z" fill="#f59e0b" />
+          <path d="M20 33 L80 33 L76 38 L24 38 Z" fill="#d97706" />
+          {/* Robot Head */}
+          <rect x="24" y="34" width="52" height="42" rx="12" fill="#1e293b" stroke="#475569" strokeWidth="2.5" />
+          {/* Visor Screen */}
+          <rect x="29" y="39" width="42" height="31" rx="8" fill="#090f1d" />
+          {renderEyesAndMouth()}
+          {/* Body */}
+          <path d="M24 98 C24 80, 76 80, 76 98 Z" fill="#d97706" />
+        </svg>
+      </div>
+      <div className="avatar-name">CRICKO-BOT</div>
+      {quip && <div className="bot-speech-bubble">“{quip}”</div>}
+    </div>
+  );
+}
+```
+
+---
+
+### 11. `src/components/Scoreboard.jsx`
+
+Professional broadcast cricket scoreboard with animated score pops, target tracking, balls count, last ball breakdown, and current-innings ball-by-ball timeline.
+
+```jsx
+import React from 'react';
+
+export default function Scoreboard({
+  playerScore,
+  playerWickets,
+  botScore,
+  botWickets,
+  innings,
+  target,
+  ballsPlayed,
+  lastBall,
+  lastResult,
+  battingSide,
+  ballHistory,
+  scorePulseKey,
+}) {
+  return (
+    <header className="cricket-scoreboard" aria-label="Match Scoreboard">
+      <div className="sb-teams">
+        <div className={`sb-team ${battingSide === 'PLAYER' ? 'sb-team--active' : ''}`}>
+          <span className="sb-label">PLAYER</span>
+          <span key={`p-${scorePulseKey}`} className="sb-score score-pop">
+            {playerScore}/{playerWickets}
+          </span>
+        </div>
+
+        <div className="sb-divider">VS</div>
+
+        <div className={`sb-team ${battingSide === 'BOT' ? 'sb-team--active' : ''}`}>
+          <span className="sb-label">BOT</span>
+          <span key={`b-${scorePulseKey}`} className="sb-score score-pop">
+            {botScore}/{botWickets}
+          </span>
+        </div>
+      </div>
+
+      <div className="sb-meta">
+        <div className="sb-pill">
+          <span>INNINGS</span>
+          <strong>{innings}</strong>
+        </div>
+        {target !== null && (
+          <div className="sb-pill sb-pill--gold">
+            <span>TARGET</span>
+            <strong>{target}</strong>
+          </div>
+        )}
+        <div className="sb-pill">
+          <span>BALLS</span>
+          <strong>{ballsPlayed}</strong>
+        </div>
+      </div>
+
+      <div className="sb-last-ball">
+        <div className="sb-last-nums">
+          <span>LAST BALL:</span>
+          <strong>
+            {lastBall ? `YOU: ${lastBall.player} | BOT: ${lastBall.bot}` : 'WAITING FOR DELIVERY'}
+          </strong>
+        </div>
+        <div
+          key={`res-${scorePulseKey}`}
+          className={`sb-last-result ${
+            lastResult === 'OUT!' ? 'is-out' : lastResult ? 'is-runs' : ''
+          }`}
+        >
+          {lastResult || 'READY'}
+        </div>
+      </div>
+
+      {ballHistory.length > 0 && (
+        <div className="sb-timeline" aria-label="Ball by ball history">
+          {ballHistory.slice(-10).map((b, i) => (
+            <span
+              key={i}
+              className={`timeline-chip ${b.isOut ? 'chip-out' : b.runs >= 6 ? 'chip-big' : ''}`}
+            >
+              {b.isOut ? 'W' : b.runs}
+            </span>
+          ))}
+        </div>
+      )}
+    </header>
+  );
+}
+```
+
+---
+
+### 12. `src/components/WebcamPanel.jsx`
+
+Loads MediaPipe `HandLandmarker` (`@mediapipe/tasks-vision`)[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEKLOgZvHqfzAEL_fKYetpIzDCSfmlCAV4R96aXjoGlFopZADr6SaiJ6cdXarNUM0OpB51QDv4yMTi7A-Z_PFee0UpiZtuWWW3VbyQ_OAxuhUBw8f2t0-zhKlSaAeNktDdd_mROSWOIGRaDthDk1EREYKIkPGRSHhai5HESvOUOUOwXCA%3D%3D)], draws real-time 21-point hand landmarks on the mirrored canvas, tracks stability to lock numbers 1–9 cleanly, and seamlessly provides a fallback 1–9 gesture pad when Webcam is toggled OFF or camera permission is unavailable.
+
+```jsx
+import React, { useEffect, useRef, useState } from 'react';
+import { FilesetResolver, HandLandmarker } from '@mediapipe/tasks-vision';
+import { recognizeCustomHandGesture, GestureStabilityTracker } from '../utils/gestureRecognizer';
+import HandIcon from './HandIcon';
+
+const HAND_CONNECTIONS = [
+  [0, 1], [1, 2], [2, 3], [3, 4],
+  [0, 5], [5, 6], [6, 7], [7, 8],
+  [5, 9], [9, 10], [10, 11], [11, 12],
+  [9, 13], [13, 14], [14, 15], [15, 16],
+  [13, 17], [0, 17], [17, 18], [18, 19], [19, 20],
+];
+
+export default function WebcamPanel({
+  webcamEnabled,
+  canLock,
+  turnId,
+  onConfirmNumber,
+  onEnableFallback,
+}) {
+  const videoRef = useRef(null);
+  const canvasRef = useRef(null);
+  const landmarkerRef = useRef(null);
+  const streamRef = useRef(null);
+  const rafRef = useRef(null);
+  const trackerRef = useRef(new GestureStabilityTracker(750));
+  const lastVideoTimeRef = useRef(-1);
+  const lastTimestampRef = useRef(0);
+
+  // Refs to avoid restarting webcam loop when turn props change
+  const canLockRef = useRef(canLock);
+  const onConfirmRef = useRef(onConfirmNumber);
+  const lockedTurnRef = useRef(-1);
+
+  useEffect(() => {
+    canLockRef.current = canLock;
+  }, [canLock]);
+
+  useEffect(() => {
+    onConfirmRef.current = onConfirmNumber;
+  }, [onConfirmNumber]);
+
+  useEffect(() => {
+    trackerRef.current.reset();
+    setStabilityProgress(0);
+    setDetectedNum(null);
+  }, [turnId]);
+
+  const [cameraStatus, setCameraStatus] = useState('idle'); // idle | loading | ready | error
+  const [errorMessage, setErrorMessage] = useState('');
+  const [detectedNum, setDetectedNum] = useState(null);
+  const [hint, setHint] = useState('Show hand gesture 1–9');
+  const [stabilityProgress, setStabilityProgress] = useState(0);
+  const [fingerState, setFingerState] = useState(null);
+
+  useEffect(() => {
+    if (!webcamEnabled) {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach((t) => t.stop());
+        streamRef.current = null;
+      }
+      setCameraStatus('idle');
+      return;
+    }
+
+    let cancelled = false;
+
+    async function setupVisionAndCamera() {
+      setCameraStatus('loading');
+      setErrorMessage('');
+
+      try {
+        if (!landmarkerRef.current) {
+          const vision = await FilesetResolver.forVisionTasks(
+            'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.18/wasm'
+          );
+          const modelPath =
+            'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task';
+
+          try {
+            landmarkerRef.current = await HandLandmarker.createFromOptions(vision, {
+              baseOptions: { modelAssetPath: modelPath, delegate: 'GPU' },
+              runningMode: 'VIDEO',
+              numHands: 1,
+              minHandDetectionConfidence: 0.6,
+              minHandPresenceConfidence: 0.6,
+              minTrackingConfidence: 0.6,
+            });
+          } catch {
+            // Fallback to CPU delegate if GPU delegate is unsupported
+            landmarkerRef.current = await HandLandmarker.createFromOptions(vision, {
+              baseOptions: { modelAssetPath: modelPath, delegate: 'CPU' },
+              runningMode: 'VIDEO',
+              numHands: 1,
+              minHandDetectionConfidence: 0.6,
+              minHandPresenceConfidence: 0.6,
+              minTrackingConfidence: 0.6,
+            });
+          }
+        }
+
+        if (cancelled) return;
+
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: 'user', width: { ideal: 640 }, height: { ideal: 480 } },
+          audio: false,
+        });
+
+        if (cancelled) {
+          stream.getTracks().forEach((t) => t.stop());
+          return;
+        }
+
+        streamRef.current = stream;
+        const video = videoRef.current;
+        if (!video) return;
+
+        video.srcObject = stream;
+        await video.play();
+        setCameraStatus('ready');
+
+        const renderLoop = () => {
+          if (cancelled) return;
+          const v = videoRef.current;
+          const canvas = canvasRef.current;
+          const detector = landmarkerRef.current;
+
+          if (v && canvas && detector && v.readyState >= 2 && v.videoWidth > 0) {
+            if (canvas.width !== v.videoWidth || canvas.height !== v.videoHeight) {
+              canvas.width = v.videoWidth;
+              canvas.height = v.videoHeight;
+            }
+
+            if (v.currentTime !== lastVideoTimeRef.current) {
+              lastVideoTimeRef.current = v.currentTime;
+              const now = Math.max(performance.now(), lastTimestampRef.current + 1);
+              lastTimestampRef.current = now;
+
+              const results = detector.detectForVideo(v, now);
+              const ctx = canvas.getContext('2d');
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+              if (results.landmarks && results.landmarks.length > 0) {
+                const lm = results.landmarks[0];
+                const aspect = v.videoWidth / v.videoHeight;
+                const recognition = recognizeCustomHandGesture(lm, aspect);
+
+                setDetectedNum(recognition.number);
+                setHint(recognition.hint);
+                setFingerState(recognition.fingers);
+
+                // Draw hand skeleton
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = recognition.number ? '#10b981' : '#38bdf8';
+                for (const [a, b] of HAND_CONNECTIONS) {
+                  ctx.beginPath();
+                  ctx.moveTo(lm[a].x * canvas.width, lm[a].y * canvas.height);
+                  ctx.lineTo(lm[b].x * canvas.width, lm[b].y * canvas.height);
+                  ctx.stroke();
+                }
+
+                for (let i = 0; i < lm.length; i++) {
+                  const isTip = i === 4 || i === 8 || i === 12 || i === 16 || i === 20;
+                  ctx.beginPath();
+                  ctx.arc(
+                    lm[i].x * canvas.width,
+                    lm[i].y * canvas.height,
+                    isTip ? 5.5 : 3.5,
+                    0,
+                    Math.PI * 2
+                  );
+                  ctx.fillStyle = isTip ? '#fbbf24' : '#ffffff';
+                  ctx.fill();
+                }
+
+                // Stability check & lock
+                if (canLockRef.current && lockedTurnRef.current !== turnId) {
+                  const stability = trackerRef.current.update(recognition.number, now);
+                  setStabilityProgress(stability.progress);
+                  if (stability.stableNumber !== null) {
+                    lockedTurnRef.current = turnId;
+                    trackerRef.current.reset();
+                    setStabilityProgress(1);
+                    onConfirmRef.current(stability.stableNumber);
+                  }
+                } else {
+                  setStabilityProgress(0);
+                }
+              } else {
+                setDetectedNum(null);
+                setFingerState(null);
+                setHint('Place your hand inside the frame');
+                const stability = trackerRef.current.update(null, now);
+                setStabilityProgress(stability.progress);
+              }
+            }
+          }
+
+          rafRef.current = requestAnimationFrame(renderLoop);
+        };
+
+        rafRef.current = requestAnimationFrame(renderLoop);
+      } catch (err) {
+        if (!cancelled) {
+          setCameraStatus('error');
+          setErrorMessage(
+            err?.name === 'NotAllowedError'
+              ? 'Camera permission denied. Allow webcam access or switch to Manual Pad.'
+              : 'Could not initialize webcam or MediaPipe Hands.'
+          );
+        }
+      }
+    }
+
+    setupVisionAndCamera();
+
+    return () => {
+      cancelled = true;
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach((t) => t.stop());
+        streamRef.current = null;
+      }
+    };
+  }, [webcamEnabled, turnId]);
+
+  if (!webcamEnabled) {
+    return (
+      <div className="webcam-panel webcam-panel--pad">
+        <div className="panel-header">
+          <span>🖐️ GESTURE PAD (WEBCAM OFF)</span>
+          <span className="status-chip">MANUAL MODE</span>
+        </div>
+        <p className="pad-subtitle">
+          Select your hand gesture (1–9) to play simultaneously against the Bot:
+        </p>
+        <div className="gesture-pad-grid">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+            <button
+              key={num}
+              type="button"
+              disabled={!canLock}
+              className="pad-btn"
+              onClick={() => onConfirmNumber(num)}
+            >
+              <HandIcon number={num} size={42} />
+              <span className="pad-num">{num}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="webcam-panel">
+      <div className="panel-header">
+        <span>📷 LIVE HAND TRACKER</span>
+        <span className={`status-chip status-chip--${cameraStatus}`}>
+          {cameraStatus === 'ready'
+            ? 'TRACKING LIVE'
+            : cameraStatus === 'loading'
+            ? 'LOADING AI...'
+            : cameraStatus === 'error'
+            ? 'CAM ERROR'
+            : 'OFF'}
+        </span>
+      </div>
+
+      <div className="webcam-viewport">
+        <video ref={videoRef} playsInline muted className="webcam-video" />
+        <canvas ref={canvasRef} className="webcam-canvas" />
+
+        {cameraStatus === 'loading' && (
+          <div className="webcam-overlay-msg">
+            <div className="spinner" />
+            <p>Loading MediaPipe Hand Tracker & Camera...</p>
+          </div>
+        )}
+
+        {cameraStatus === 'error' && (
+          <div className="webcam-overlay-msg webcam-overlay-msg--error">
+            <p>{errorMessage}</p>
+            <button type="button" className="btn btn-primary btn-sm" onClick={onEnableFallback}>
+              Play With On-Screen Gesture Pad
+            </button>
+          </div>
+        )}
+
+        {cameraStatus === 'ready' && (
+          <>
+            <div className={`detected-badge ${detectedNum ? 'is-valid' : ''}`}>
+              <span className="detected-label">GESTURE</span>
+              <strong>{detectedNum ?? '—'}</strong>
+            </div>
+
+            {canLock && (
+              <div className="stability-bar-wrap">
+                <div className="stability-bar-label">
+                  {stabilityProgress > 0.05
+                    ? `HOLD STEADY TO LOCK (${Math.round(stabilityProgress * 100)}%)`
+                    : 'SHOW NUMBER (1–9)'}
+                </div>
+                <div className="stability-track">
+                  <div
+                    className="stability-fill"
+                    style={{ width: `${Math.round(stabilityProgress * 100)}%` }}
+                  />
+                </div>
+              </div>
+            )}
+          </>
+        )}
+      </div>
+
+      <div className="webcam-telemetry">
+        <span className="telemetry-hint">{hint}</span>
+        {fingerState && (
+          <div className="finger-pills">
+            {['thumb', 'index', 'middle', 'ring', 'pinky'].map((f) => {
+              const st = fingerState[f];
+              const active = st === 'raised' || st === 'extended';
+              return (
+                <span key={f} className={`finger-pill ${active ? 'is-up' : ''}`}>
+                  {f[0].toUpperCase()}
+                </span>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+```
+
+---
+
+### 13. `src/components/Modals.jsx`
+
+Complete **How To Play** modal (including the 1–9 custom gesture rules) and **Settings** modal (SFX, Voice Commentary, Webcam ON/OFF, Bot Difficulty, Restart Match, Return to Main Menu).
+
+```jsx
+import React from 'react';
+import HandIcon from './HandIcon';
+import { GESTURE_DESCRIPTIONS } from '../utils/gestureRecognizer';
+
+export function HowToPlayModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label="How To Play">
+      <div className="modal-card modal-card--wide">
+        <div className="modal-header">
+          <h2>🏏 HOW TO PLAY ODD EVEN HAND CRICKET</h2>
+          <button type="button" className="modal-close" onClick={onClose} aria-label="Close">
+            ✕
+          </button>
+        </div>
+
+        <div className="modal-body">
+          <div className="howto-steps">
+            <div className="howto-step">
+              <span className="step-num">1</span>
+              <div>
+                <h4>The Toss (Odd or Even)</h4>
+                <p>
+                  Choose <strong>ODD</strong> or <strong>EVEN</strong>. Show a gesture (1–9) on your
+                  webcam while the Bot locks its secret number. Both reveal simultaneously—if the
+                  sum matches your parity choice, you win the toss and choose to{' '}
+                  <strong>BAT</strong> or <strong>BOWL</strong>!
+                </p>
+              </div>
+            </div>
+
+            <div className="howto-step">
+              <span className="step-num">2</span>
+              <div>
+                <h4>Batting &amp; Bowling</h4>
+                <p>
+                  Each ball, both sides reveal 1–9 simultaneously.{' '}
+                  <strong>Different numbers</strong> add the batter&apos;s number to their score.{' '}
+                  <strong>Same number = OUT!</strong> That ends the innings immediately.
+                </p>
+              </div>
+            </div>
+
+            <div className="howto-step">
+              <span className="step-num">3</span>
+              <div>
+                <h4>Chasing the Target</h4>
+                <p>
+                  In the 2nd innings, the chasing side needs{' '}
+                  <strong>1st Innings Score + 1</strong> to win. Getting out before reaching the
+                  target loses—matching the exact 1st innings score results in a{' '}
+                  <strong>TIE</strong>!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3 className="guide-subheading">Custom Hand Gesture Guide (1–9)</h3>
+          <div className="gesture-guide-grid">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+              <div key={num} className="guide-item">
+                <HandIcon number={num} size={48} />
+                <div className="guide-item-info">
+                  <strong>Number {num}</strong>
+                  <span>{GESTURE_DESCRIPTIONS[num]}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="modal-footer">
+          <button type="button" className="btn btn-primary" onClick={onClose}>
+            GOT IT, LET&apos;S PLAY!
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function SettingsModal({
+  isOpen,
+  onClose,
+  settings,
+  onUpdateSettings,
+  onRestartMatch,
+  onReturnHome,
+  inMatch,
+}) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="modal-backdrop" role="dialog" aria-modal="true" aria-label="Game Settings">
+      <div className="modal-card">
+        <div className="modal-header">
+          <h2>⚙️ GAME SETTINGS</h2>
+          <button type="button" className="modal-close" onClick={onClose} aria-label="Close">
+            ✕
+          </button>
+        </div>
+
+        <div className="modal-body settings-list">
+          <label className="setting-row">
+            <div>
+              <strong>🔊 Sound Effects</strong>
+              <span>Bat hits, wickets, toss &amp; celebration SFX</span>
+            </div>
+            <input
+              type="checkbox"
+              checked={settings.sfxEnabled}
+              onChange={(e) => onUpdateSettings({ sfxEnabled: e.target.checked })}
+            />
+          </label>
+
+          <label className="setting-row">
+            <div>
+              <strong>🎙️ Voice Commentary</strong>
+              <span>Live match announcer &amp; wicket calls</span>
+            </div>
+            <input
+              type="checkbox"
+              checked={settings.voiceEnabled}
+              onChange={(e) => onUpdateSettings({ voiceEnabled: e.target.checked })}
+            />
+          </label>
+
+          <label className="setting-row">
+            <div>
+              <strong>📷 Webcam Hand Recognition</strong>
+              <span>Turn OFF to use on-screen gesture pad</span>
+            </div>
+            <input
+              type="checkbox"
+              checked={settings.webcamEnabled}
+              onChange={(e) => onUpdateSettings({ webcamEnabled: e.target.checked })}
+            />
+          </label>
+
+          <div className="setting-row setting-row--col">
+            <div>
+              <strong>🤖 Bot Difficulty</strong>
+              <span>Fair AI without peeking at your current gesture</span>
+            </div>
+            <div className="difficulty-pills">
+              {['easy', 'medium', 'hard'].map((lvl) => (
+                <button
+                  key={lvl}
+                  type="button"
+                  className={`diff-pill ${settings.difficulty === lvl ? 'is-active' : ''}`}
+                  onClick={() => onUpdateSettings({ difficulty: lvl })}
+                >
+                  {lvl.toUpperCase()}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {inMatch && (
+            <div className="settings-actions">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={() => {
+                  onRestartMatch();
+                  onClose();
+                }}
+              >
+                🔄 Restart Match
+              </button>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={() => {
+                  onReturnHome();
+                  onClose();
+                }}
+              >
+                🏠 Main Menu
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+---
+
+### 14. `src/App.jsx`
+
+Manages the full game flow (`HOME → TOSS_CHOICE → TOSS_PLAY → TOSS_RESULT → BAT_BOWL_DECISION → INNINGS_1 → INNINGS_BREAK → INNINGS_2 → MATCH_RESULT`), fair pre-turn hidden Bot selection, simultaneous reveals, cricket scoring, target chasing, tie handling, and match summary stats.
+
+```jsx
+import React, { useEffect, useRef, useState } from 'react';
+import StadiumBackground from './components/StadiumBackground';
+import HandIcon from './components/HandIcon';
+import { PlayerAvatar, BotAvatar } from './components/Avatars';
+import Scoreboard from './components/Scoreboard';
+import WebcamPanel from './components/WebcamPanel';
+import { HowToPlayModal, SettingsModal } from './components/Modals';
+import { GESTURE_DESCRIPTIONS } from './utils/gestureRecognizer';
+import {
+  pickBotTossCall,
+  pickBotBatOrBowl,
+  selectBotNumber,
+  getBotReaction,
+} from './utils/botAI';
+import { soundEngine } from './utils/soundEngine';
+
+const INITIAL_MATCH = {
+  playerTossChoice: null,
+  botTossChoice: null,
+  tossPlayerNum: null,
+  tossBotNum: null,
+  tossWinner: null, // 'PLAYER' | 'BOT'
+  firstBatter: null, // 'PLAYER' | 'BOT'
+  innings: 1,
+  battingSide: null, // 'PLAYER' | 'BOT'
+  playerScore: 0,
+  playerWickets: 0,
+  playerBalls: 0,
+  botScore: 0,
+  botWickets: 0,
+  botBalls: 0,
+  target: null,
+  lastBall: null,
+  lastResult: '',
+  ballHistory: [],
+  playerPastNumbers: [],
+  winner: null, // 'PLAYER' | 'BOT' | 'TIE'
+  summary: '',
+};
+
+export default function App() {
+  const [screen, setScreen] = useState('HOME');
+  const [match, setMatch] = useState(INITIAL_MATCH);
+  const [settings, setSettings] = useState({
+    sfxEnabled: true,
+    voiceEnabled: true,
+    webcamEnabled: true,
+    difficulty: 'medium',
+  });
+
+  const [showHowTo, setShowHowTo] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+
+  // Turn synchronization: Bot picks its secret number BEFORE player reveals gesture
+  const [turnPhase, setTurnPhase] = useState('WAITING'); // 'WAITING' | 'REVEALING'
+  const [turnId, setTurnId] = useState(1);
+  const [revealedPair, setRevealedPair] = useState(null); // { player, bot, label, type }
+  const [scorePulseKey, setScorePulseKey] = useState(0);
+
+  const [botExpression, setBotExpression] = useState('neutral');
+  const [botQuip, setBotQuip] = useState('Show me your best hand!');
+  const [botDecisionText, setBotDecisionText] = useState('');
+
+  const botSecretRef = useRef(null);
+  const timerRef = useRef(null);
+
+  const clearPendingTimer = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    soundEngine.setSettings({
+      sfxEnabled: settings.sfxEnabled,
+      voiceEnabled: settings.voiceEnabled,
+    });
+  }, [settings.sfxEnabled, settings.voiceEnabled]);
+
+  useEffect(() => {
+    return () => clearPendingTimer();
+  }, []);
+
+  const updateSettings = (patch) => {
+    setSettings((prev) => ({ ...prev, ...patch }));
+  };
+
+  const prepareNextTurn = (role, pastNums = [], runsNeeded = null, diff = settings.difficulty) => {
+    // Bot independently locks its number BEFORE the player shows or locks any gesture
+    botSecretRef.current = selectBotNumber({
+      difficulty: diff,
+      role,
+      playerPastNumbers: pastNums,
+      runsNeeded,
+    });
+    setTurnPhase('WAITING');
+    setRevealedPair(null);
+    setTurnId((id) => id + 1);
+  };
+
+  const startNewMatch = () => {
+    clearPendingTimer();
+    soundEngine.playClick();
+    setMatch(INITIAL_MATCH);
+    setBotExpression('neutral');
+    setBotQuip('Ready for the toss! Call Odd or Even.');
+    setBotDecisionText('');
+    setRevealedPair(null);
+    setScreen('TOSS_CHOICE');
+  };
+
+  const returnToMainMenu = () => {
+    clearPendingTimer();
+    soundEngine.playClick();
+    setMatch(INITIAL_MATCH);
+    setScreen('HOME');
+  };
+
+  // Step 1: Player chooses ODD or EVEN
+  const handleChooseToss = (choice) => {
+    soundEngine.playClick();
+    const botCall = pickBotTossCall();
+    setMatch((prev) => ({
+      ...prev,
+      playerTossChoice: choice,
+      botTossChoice: botCall,
+    }));
+    setBotExpression('thinking');
+    setBotQuip('I locked my secret toss number. Show yours!');
+    prepareNextTurn('TOSS');
+    setScreen('TOSS_PLAY');
+    soundEngine.speak(`You chose ${choice}. Show your number for the toss!`);
+  };
+
+  // Step 2: Handle confirmed player gesture during TOSS_PLAY
+  const handleTossGesture = (playerNum) => {
+    if (turnPhase !== 'WAITING') return;
+    const botNum = botSecretRef.current ?? selectBotNumber({ role: 'TOSS' });
+    const sum = playerNum + botNum;
+    const parity = sum % 2 === 0 ? 'EVEN' : 'ODD';
+    const playerWon = parity === match.playerTossChoice;
+    const tossWinner = playerWon ? 'PLAYER' : 'BOT';
+
+    setTurnPhase('REVEALING');
+    soundEngine.playTossFlip();
+
+    setRevealedPair({
+      player: playerNum,
+      bot: botNum,
+      label: `${playerNum} + ${botNum} = ${sum} (${parity})`,
+      type: playerWon ? 'win' : 'lose',
+    });
+
+    setBotExpression(playerWon ? 'surprised' : 'happy');
+    setBotQuip(getBotReaction(playerWon ? 'botLostToss' : 'botWonToss'));
+
+    setMatch((prev) => ({
+      ...prev,
+      tossPlayerNum: playerNum,
+      tossBotNum: botNum,
+      tossWinner,
+    }));
+
+    clearPendingTimer();
+    timerRef.current = setTimeout(() => {
+      setScreen('TOSS_RESULT');
+      soundEngine.speak(
+        playerWon
+          ? `Total is ${sum}, ${parity}. You won the toss!`
+          : `Total is ${sum}, ${parity}. Bot won the toss!`
+      );
+    }, 2200);
+  };
+
+  // Step 3: Advance from TOSS_RESULT to BAT_BOWL_DECISION
+  const handleProceedToDecision = () => {
+    soundEngine.playClick();
+    setScreen('BAT_BOWL_DECISION');
+
+    if (match.tossWinner === 'BOT') {
+      const botChoice = pickBotBatOrBowl(settings.difficulty);
+      const firstBatter = botChoice === 'BAT' ? 'BOT' : 'PLAYER';
+      setBotExpression('confident');
+      setBotDecisionText(
+        botChoice === 'BAT' ? 'BOT CHOSE TO BAT FIRST!' : 'BOT CHOSE TO BOWL FIRST!'
+      );
+      setBotQuip(
+        botChoice === 'BAT'
+          ? 'I am putting a huge score on the board!'
+          : 'Put your pads on — I am bowling first!'
+      );
+      soundEngine.speak(
+        botChoice === 'BAT' ? 'Bot chose to bat first!' : 'Bot chose to bowl first!'
+      );
+
+      clearPendingTimer();
+      timerRef.current = setTimeout(() => {
+        beginInnings1(firstBatter);
+      }, 2200);
+    }
+  };
+
+  const beginInnings1 = (firstBatter) => {
+    soundEngine.playClick();
+    setMatch((prev) => ({
+      ...prev,
+      firstBatter,
+      innings: 1,
+      battingSide: firstBatter,
+      lastBall: null,
+      lastResult: '',
+      ballHistory: [],
+    }));
+    setBotExpression('neutral');
+    setBotQuip(firstBatter === 'PLAYER' ? 'Try hitting past my bowling!' : 'Time to score big!');
+    prepareNextTurn(firstBatter === 'PLAYER' ? 'BOWLING' : 'BATTING', [], null);
+    setScreen('INNINGS_1');
+    soundEngine.speak(
+      firstBatter === 'PLAYER' ? 'First innings begins. You are batting!' : 'First innings begins. Bot is batting!'
+    );
+  };
+
+  const beginInnings2 = () => {
+    soundEngine.playClick();
+    const secondBatter = match.firstBatter === 'PLAYER' ? 'BOT' : 'PLAYER';
+    const firstScore = match.firstBatter === 'PLAYER' ? match.playerScore : match.botScore;
+    const target = firstScore + 1;
+
+    setMatch((prev) => ({
+      ...prev,
+      innings: 2,
+      battingSide: secondBatter,
+      target,
+      lastBall: null,
+      lastResult: '',
+      ballHistory: [],
+    }));
+
+    setBotExpression('confident');
+    setBotQuip(
+      secondBatter === 'BOT'
+        ? `Target ${target}! Let the chase begin!`
+        : `Defending ${firstScore}! Good luck chasing ${target}!`
+    );
+
+    prepareNextTurn(
+      secondBatter === 'PLAYER' ? 'BOWLING' : 'BATTING',
+      match.playerPastNumbers,
+      secondBatter === 'BOT' ? target : null
+    );
+    setScreen('INNINGS_2');
+    soundEngine.speak(`Second innings! Target is ${target} runs.`);
+  };
+
+  // Cricket ball delivery handler for Innings 1 & 2
+  const handleCricketBall = (playerNum) => {
+    if (turnPhase !== 'WAITING') return;
+
+    const isPlayerBatting = match.battingSide === 'PLAYER';
+    const botRole = isPlayerBatting ? 'BOWLING' : 'BATTING';
+    const runsNeeded =
+      match.innings === 2 && !isPlayerBatting && match.target !== null
+        ? match.target - match.botScore
+        : null;
+
+    const botNum =
+      botSecretRef.current ??
+      selectBotNumber({
+        difficulty: settings.difficulty,
+        role: botRole,
+        playerPastNumbers: match.playerPastNumbers,
+        runsNeeded,
+      });
+
+    setTurnPhase('REVEALING');
+    const isOut = playerNum === botNum;
+    const runs = isOut ? 0 : isPlayerBatting ? playerNum : botNum;
+    const resultText = isOut ? 'OUT!' : `+${runs} RUN${runs === 1 ? '' : 'S'}`;
+
+    if (isOut) {
+      soundEngine.playWicket();
+    } else {
+      soundEngine.playBatHit(runs);
+    }
+
+    setScorePulseKey((k) => k + 1);
+    setRevealedPair({
+      player: playerNum,
+      bot: botNum,
+      label: resultText,
+      type: isOut ? 'out' : runs >= 6 ? 'big' : 'runs',
+    });
+
+    // Bot expression & quip
+    if (isOut) {
+      if (isPlayerBatting) {
+        setBotExpression('happy');
+        setBotQuip(getBotReaction('botTookWicket'));
+        soundEngine.speak(`Out! Both showed ${playerNum}!`);
+      } else {
+        setBotExpression('disappointed');
+        setBotQuip(getBotReaction('botOut'));
+        soundEngine.speak(`Bot is out on ${botNum}!`);
+      }
+    } else if (!isPlayerBatting) {
+      if (runs >= 6) {
+        setBotExpression('confident');
+        setBotQuip(getBotReaction('botScoredBig'));
+      } else {
+        setBotExpression('happy');
+        setBotQuip(getBotReaction('botScoredSmall'));
+      }
+      if (runs >= 7) soundEngine.speak(`Massive ${runs} runs by the Bot!`);
+    } else {
+      setBotExpression(runs >= 7 ? 'surprised' : 'neutral');
+      setBotQuip(getBotReaction('botMissedWicket'));
+      if (runs >= 7) soundEngine.speak(`Huge ${runs} runs!`);
+    }
+
+    // Compute updated scoreboard state
+    const updatedPastNums = [...match.playerPastNumbers, playerNum];
+    const newPlayerScore = isPlayerBatting ? match.playerScore + runs : match.playerScore;
+    const newPlayerWickets = isPlayerBatting && isOut ? 1 : match.playerWickets;
+    const newPlayerBalls = isPlayerBatting ? match.playerBalls + 1 : match.playerBalls;
+
+    const newBotScore = !isPlayerBatting ? match.botScore + runs : match.botScore;
+    const newBotWickets = !isPlayerBatting && isOut ? 1 : match.botWickets;
+    const newBotBalls = !isPlayerBatting ? match.botBalls + 1 : match.botBalls;
+
+    const updatedHistory = [
+      ...match.ballHistory,
+      { player: playerNum, bot: botNum, runs, isOut },
+    ];
+
+    setMatch((prev) => ({
+      ...prev,
+      playerScore: newPlayerScore,
+      playerWickets: newPlayerWickets,
+      playerBalls: newPlayerBalls,
+      botScore: newBotScore,
+      botWickets: newBotWickets,
+      botBalls: newBotBalls,
+      lastBall: { player: playerNum, bot: botNum },
+      lastResult: resultText,
+      ballHistory: updatedHistory,
+      playerPastNumbers: updatedPastNums,
+    }));
+
+    clearPendingTimer();
+    timerRef.current = setTimeout(() => {
+      if (match.innings === 1) {
+        if (isOut) {
+          setScreen('INNINGS_BREAK');
+          const firstScore = isPlayerBatting ? newPlayerScore : newBotScore;
+          soundEngine.speak(`Innings break! Target is ${firstScore + 1} runs.`);
+        } else {
+          prepareNextTurn(botRole, updatedPastNums, null);
+        }
+      } else {
+        // Innings 2 chase evaluation
+        const chasingScore = isPlayerBatting ? newPlayerScore : newBotScore;
+        const target = match.target;
+        const firstScore = target - 1;
+
+        if (chasingScore >= target) {
+          // Chasing team wins immediately!
+          const winner = isPlayerBatting ? 'PLAYER' : 'BOT';
+          finishMatch(winner, newPlayerScore, newBotScore, updatedPastNums, isPlayerBatting);
+        } else if (isOut) {
+          if (chasingScore === firstScore) {
+            finishMatch('TIE', newPlayerScore, newBotScore, updatedPastNums, isPlayerBatting);
+          } else {
+            const winner = isPlayerBatting ? 'BOT' : 'PLAYER';
+            finishMatch(winner, newPlayerScore, newBotScore, updatedPastNums, isPlayerBatting);
+          }
+        } else {
+          const nextNeeded = target - chasingScore;
+          prepareNextTurn(botRole, updatedPastNums, !isPlayerBatting ? nextNeeded : null);
+        }
+      }
+    }, 2200);
+  };
+
+  const finishMatch = (winner, pScore, bScore) => {
+    let summary = '';
+    if (winner === 'TIE') {
+      summary = `An epic deadlock! Both sides finished level on ${pScore} runs.`;
+      soundEngine.playTossFlip();
+      soundEngine.speak('What a thriller! The match is tied!');
+    } else if (winner === 'PLAYER') {
+      const margin = pScore - bScore;
+      summary =
+        match.battingSide === 'PLAYER'
+          ? `You chased down the target with ${pScore} runs on the board!`
+          : `You defended your total and beat the Bot by ${margin} run${margin === 1 ? '' : 's'}!`;
+      soundEngine.playVictory();
+      soundEngine.speak('Congratulations! You won the match!');
+    } else {
+      const margin = bScore - pScore;
+      summary =
+        match.battingSide === 'BOT'
+          ? `Cricko-Bot chased down the target finishing on ${bScore} runs.`
+          : `Cricko-Bot defended its total and won by ${margin} run${margin === 1 ? '' : 's'}.`;
+      soundEngine.playDefeat();
+      soundEngine.speak('Cricko-Bot wins the match!');
+    }
+
+    setBotExpression(winner === 'BOT' ? 'happy' : winner === 'PLAYER' ? 'disappointed' : 'surprised');
+    setMatch((prev) => ({
+      ...prev,
+      winner,
+      summary,
+    }));
+    setScreen('MATCH_RESULT');
+  };
+
+  const handleTurnGesture = (num) => {
+    soundEngine.playLock();
+    if (screen === 'TOSS_PLAY') {
+      handleTossGesture(num);
+    } else if (screen === 'INNINGS_1' || screen === 'INNINGS_2') {
+      handleCricketBall(num);
+    }
+  };
+
+  const isInMatch =
+    screen !== 'HOME' && screen !== 'MATCH_RESULT';
+
+  const currentInningsBalls =
+    match.battingSide === 'PLAYER' ? match.playerBalls : match.botBalls;
+
+  const stadiumHighlight =
+    revealedPair?.type === 'out'
+      ? 'wicket'
+      : revealedPair?.type === 'big' || screen === 'MATCH_RESULT'
+      ? 'gold'
+      : 'neutral';
+
+  return (
+    <div className="app-shell">
+      <StadiumBackground highlight={stadiumHighlight} />
+
+      {/* Top Navigation Bar */}
+      <nav className="top-nav">
+        <div className="brand-mini" onClick={returnToMainMenu} role="button" tabIndex={0}>
+          <span>🏏</span> ODD EVEN HAND CRICKET
+        </div>
+        <div className="nav-actions">
+          <button type="button" className="icon-btn" onClick={() => setShowHowTo(true)}>
+            ❓ How to Play
+          </button>
+          <button type="button" className="icon-btn" onClick={() => setShowSettings(true)}>
+            ⚙️ Settings
+          </button>
+        </div>
+      </nav>
+
+      {/* Live Cricket Scoreboard during Innings */}
+      {(screen === 'INNINGS_1' || screen === 'INNINGS_2') && (
+        <Scoreboard
+          playerScore={match.playerScore}
+          playerWickets={match.playerWickets}
+          botScore={match.botScore}
+          botWickets={match.botWickets}
+          innings={match.innings}
+          target={match.target}
+          ballsPlayed={currentInningsBalls}
+          lastBall={match.lastBall}
+          lastResult={match.lastResult}
+          battingSide={match.battingSide}
+          ballHistory={match.ballHistory}
+          scorePulseKey={scorePulseKey}
+        />
+      )}
+
+      <main className="stage-container">
+        {/* SCREEN 1: HOME SCREEN */}
+        {screen === 'HOME' && (
+          <section className="home-screen">
+            <div className="hero-card">
+              <div className="hero-eyebrow">AI WEBCAM STADIUM EDITION</div>
+              <h1 className="hero-title">ODD EVEN HAND CRICKET</h1>
+              <p className="hero-subtitle">Challenge the Bot!</p>
+              <p className="hero-desc">
+                Step onto the virtual pitch with real-time webcam hand tracking! Win the Odd-Even
+                toss, outsmart Cricko-Bot with custom gestures 1–9, smash big runs, and defend
+                your stumps.
+              </p>
+
+              <div className="hero-cta">
+                <button type="button" className="btn btn-primary btn-lg" onClick={startNewMatch}>
+                  🏏 START GAME
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-secondary btn-lg"
+                  onClick={() => {
+                    soundEngine.playClick();
+                    setShowHowTo(true);
+                  }}
+                >
+                  📖 HOW TO PLAY
+                </button>
+              </div>
+            </div>
+
+            <div className="home-guide-card">
+              <div className="guide-card-head">
+                <h2>✋ HAND GESTURE REFERENCE GUIDE (1–9)</h2>
+                <span>Works with Left or Right Hand</span>
+              </div>
+              <div className="home-gesture-grid">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+                  <div key={num} className="gesture-tile">
+                    <div className="gesture-tile-num">{num}</div>
+                    <HandIcon number={num} size={56} />
+                    <p>{GESTURE_DESCRIPTIONS[num]}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* SCREEN 2: ODD-EVEN SELECTION */}
+        {screen === 'TOSS_CHOICE' && (
+          <section className="center-card toss-choice-screen">
+            <div className="stage-tag">PRE-MATCH COINLESS TOSS</div>
+            <h2>CHOOSE YOUR TOSS</h2>
+            <p>
+              Pick <strong>ODD</strong> or <strong>EVEN</strong>. Both you and Cricko-Bot will show
+              a number from 1 to 9 simultaneously—the parity of the sum decides the toss winner!
+            </p>
+            <div className="toss-choice-buttons">
+              <button
+                type="button"
+                className="toss-option-btn toss-option-btn--odd"
+                onClick={() => handleChooseToss('ODD')}
+              >
+                <span className="toss-opt-title">ODD</span>
+                <span className="toss-opt-sub">Sum = 3, 5, 7, 9, 11...</span>
+              </button>
+              <button
+                type="button"
+                className="toss-option-btn toss-option-btn--even"
+                onClick={() => handleChooseToss('EVEN')}
+              >
+                <span className="toss-opt-title">EVEN</span>
+                <span className="toss-opt-sub">Sum = 2, 4, 6, 8, 10...</span>
+              </button>
+            </div>
+          </section>
+        )}
+
+        {/* SCREEN 3: PLAY THE TOSS ("SHOW YOUR NUMBER!") */}
+        {screen === 'TOSS_PLAY' && (
+          <section className="match-arena">
+            <div className="arena-col arena-col--left">
+              <PlayerAvatar statusText={`Called: ${match.playerTossChoice}`} />
+              <WebcamPanel
+                webcamEnabled={settings.webcamEnabled}
+                canLock={turnPhase === 'WAITING'}
+                turnId={turnId}
+                onConfirmNumber={handleTurnGesture}
+                onEnableFallback={() => updateSettings({ webcamEnabled: false })}
+              />
+            </div>
+
+            <div className="arena-col arena-col--center">
+              <div className="clash-panel">
+                <div className="stage-tag">TOSS IN PROGRESS</div>
+                <h2 className="clash-headline">SHOW YOUR NUMBER!</h2>
+                <p className="clash-sub">
+                  You called <strong>{match.playerTossChoice}</strong> • Bot&apos;s call:{' '}
+                  <strong>{revealedPair ? match.botTossChoice : 'HIDDEN 🔒'}</strong>
+                </p>
+
+                <div className="clash-cards">
+                  <div className={`num-card ${revealedPair ? 'is-revealed' : ''}`}>
+                    <span className="num-card-label">YOU</span>
+                    <strong>{revealedPair ? revealedPair.player : '?'}</strong>
+                  </div>
+                  <div className="clash-plus">+</div>
+                  <div className={`num-card num-card--bot ${revealedPair ? 'is-revealed' : ''}`}>
+                    <span className="num-card-label">BOT</span>
+                    <strong>{revealedPair ? revealedPair.bot : '🔒'}</strong>
+                  </div>
+                </div>
+
+                {revealedPair ? (
+                  <div className={`clash-banner clash-banner--${revealedPair.type}`}>
+                    {revealedPair.label}
+                  </div>
+                ) : (
+                  <div className="bot-locked-pill">✓ Bot has locked its hidden number</div>
+                )}
+              </div>
+            </div>
+
+            <div className="arena-col arena-col--right">
+              <BotAvatar
+                expression={botExpression}
+                quip={botQuip}
+                difficulty={settings.difficulty}
+              />
+            </div>
+          </section>
+        )}
+
+        {/* SCREEN 4: TOSS RESULT */}
+        {screen === 'TOSS_RESULT' && (
+          <section className="center-card toss-result-screen">
+            <div className="stage-tag">TOSS RESULT</div>
+            <h2 className={match.tossWinner === 'PLAYER' ? 'text-win' : 'text-lose'}>
+              {match.tossWinner === 'PLAYER' ? '🏆 YOU WON THE TOSS!' : '🤖 BOT WON THE TOSS!'}
+            </h2>
+
+            <div className="toss-breakdown">
+              <div className="breakdown-row">
+                <span>Your Toss Call</span>
+                <strong>{match.playerTossChoice}</strong>
+              </div>
+              <div className="breakdown-row">
+                <span>Bot&apos;s Secret Prediction</span>
+                <strong>{match.botTossChoice}</strong>
+              </div>
+              <div className="breakdown-row">
+                <span>Numbers Revealed</span>
+                <strong>
+                  You: {match.tossPlayerNum} + Bot: {match.tossBotNum} ={' '}
+                  {match.tossPlayerNum + match.tossBotNum} (
+                  {(match.tossPlayerNum + match.tossBotNum) % 2 === 0 ? 'EVEN' : 'ODD'})
+                </strong>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              className="btn btn-primary btn-lg"
+              onClick={handleProceedToDecision}
+            >
+              {match.tossWinner === 'PLAYER' ? 'CHOOSE BAT OR BOWL →' : 'SEE BOT DECISION →'}
+            </button>
+          </section>
+        )}
+
+        {/* SCREEN 5: BAT OR BOWL DECISION */}
+        {screen === 'BAT_BOWL_DECISION' && (
+          <section className="center-card decision-screen">
+            <div className="stage-tag">INNINGS ORDER</div>
+            {match.tossWinner === 'PLAYER' ? (
+              <>
+                <h2>MAKE YOUR CALL!</h2>
+                <p>You won the toss. Would you like to set a target or chase?</p>
+                <div className="decision-buttons">
+                  <button
+                    type="button"
+                    className="decision-btn"
+                    onClick={() => beginInnings1('PLAYER')}
+                  >
+                    <span className="dec-icon">🏏</span>
+                    <strong>BAT FIRST</strong>
+                    <span>Set a big target</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="decision-btn"
+                    onClick={() => beginInnings1('BOT')}
+                  >
+                    <span className="dec-icon">⚾</span>
+                    <strong>BOWL FIRST</strong>
+                    <span>Bowl out the Bot &amp; chase</span>
+                  </button>
+                </div>
+              </>
+            ) : (
+              <div className="bot-decision-anim">
+                <BotAvatar
+                  expression="confident"
+                  quip={botQuip}
+                  difficulty={settings.difficulty}
+                />
+                <h2 className="bot-decision-title">{botDecisionText}</h2>
+                <p>Preparing pitch for the 1st Innings...</p>
+              </div>
+            )}
+          </section>
+        )}
+
+        {/* SCREEN 6 & 8: INNINGS 1 & INNINGS 2 GAMEPLAY */}
+        {(screen === 'INNINGS_1' || screen === 'INNINGS_2') && (
+          <section className="match-arena">
+            <div className="arena-col arena-col--left">
+              <PlayerAvatar
+                isBatting={match.battingSide === 'PLAYER'}
+                statusText={
+                  match.battingSide === 'PLAYER'
+                    ? `Score: ${match.playerScore} (${match.playerBalls}b)`
+                    : `Bowling`
+                }
+              />
+              <WebcamPanel
+                webcamEnabled={settings.webcamEnabled}
+                canLock={turnPhase === 'WAITING'}
+                turnId={turnId}
+                onConfirmNumber={handleTurnGesture}
+                onEnableFallback={() => updateSettings({ webcamEnabled: false })}
+              />
+            </div>
+
+            <div className="arena-col arena-col--center">
+              <div className="clash-panel">
+                <div className="innings-banner">
+                  {match.battingSide === 'PLAYER' ? '🏏 YOU ARE BATTING' : '🤖 BOT IS BATTING'}
+                </div>
+
+                {match.innings === 2 && match.target !== null && (
+                  <div className="chase-tracker">
+                    Need{' '}
+                    <strong>
+                      {Math.max(
+                        0,
+                        match.target -
+                          (match.battingSide === 'PLAYER' ? match.playerScore : match.botScore)
+                      )}
+                    </strong>{' '}
+                    more run(s) to win
+                  </div>
+                )}
+
+                <div className="clash-cards">
+                  <div className={`num-card ${revealedPair ? 'is-revealed' : ''}`}>
+                    <span className="num-card-label">YOUR HAND</span>
+                    <strong>{revealedPair ? revealedPair.player : '?'}</strong>
+                  </div>
+                  <div className="clash-vs">VS</div>
+                  <div className={`num-card num-card--bot ${revealedPair ? 'is-revealed' : ''}`}>
+                    <span className="num-card-label">BOT HAND</span>
+                    <strong>{revealedPair ? revealedPair.bot : '🔒'}</strong>
+                  </div>
+                </div>
+
+                {revealedPair ? (
+                  <div className={`clash-banner clash-banner--${revealedPair.type}`}>
+                    {revealedPair.label}
+                  </div>
+                ) : (
+                  <div className="bot-locked-pill">
+                    ✓ Bot delivery locked — show your gesture (1–9)!
+                  </div>
+                )}
+
+                <div className="rules-reminder">
+                  Same number = <strong>OUT!</strong> • Different numbers ={' '}
+                  <strong>{match.battingSide === 'PLAYER' ? 'YOUR' : 'BOT'} RUNS!</strong>
+                </div>
+              </div>
+            </div>
+
+            <div className="arena-col arena-col--right">
+              <BotAvatar
+                expression={botExpression}
+                isBatting={match.battingSide === 'BOT'}
+                quip={botQuip}
+                difficulty={settings.difficulty}
+              />
+            </div>
+          </section>
+        )}
+
+        {/* SCREEN 7: INNINGS BREAK */}
+        {screen === 'INNINGS_BREAK' && (
+          <section className="center-card innings-break-screen">
+            <div className="stage-tag">INNINGS BREAK</div>
+            <h2>END OF 1ST INNINGS!</h2>
+            <div className="break-score-box">
+              <div>
+                <span>
+                  {match.firstBatter === 'PLAYER' ? 'YOUR SCORE' : "BOT'S SCORE"}
+                </span>
+                <strong>
+                  {match.firstBatter === 'PLAYER' ? match.playerScore : match.botScore}/1
+                </strong>
+              </div>
+              <div className="break-arrow">→</div>
+              <div className="break-target">
+                <span>
+                  {match.firstBatter === 'PLAYER' ? "BOT'S TARGET" : 'YOUR TARGET'}
+                </span>
+                <strong>
+                  {(match.firstBatter === 'PLAYER' ? match.playerScore : match.botScore) + 1}
+                </strong>
+              </div>
+            </div>
+            <p>
+              Roles are now switching!{' '}
+              {match.firstBatter === 'PLAYER'
+                ? 'Time to bowl Cricko-Bot out before it reaches the target!'
+                : 'Put on your pads and chase down the target!'}
+            </p>
+            <button type="button" className="btn btn-primary btn-lg" onClick={beginInnings2}>
+              START 2ND INNINGS →
+            </button>
+          </section>
+        )}
+
+        {/* SCREEN 9: FINAL MATCH RESULT */}
+        {screen === 'MATCH_RESULT' && (
+          <section className={`center-card result-screen result-screen--${match.winner}`}>
+            <div className="result-confetti" aria-hidden="true">
+              {match.winner === 'PLAYER' ? '🏆🎉🏏✨' : match.winner === 'TIE' ? '⚡🤝⚡' : '🤖🏏'}
+            </div>
+            <div className="stage-tag">FULL TIME</div>
+            <h2 className="result-title">
+              {match.winner === 'PLAYER'
+                ? 'YOU WON!'
+                : match.winner === 'BOT'
+                ? 'BOT WON!'
+                : 'MATCH TIED!'}
+            </h2>
+            <p className="result-summary">{match.summary}</p>
+
+            <div className="result-stats-grid">
+              <div className="stat-box">
+                <span>Your Final Score</span>
+                <strong>
+                  {match.playerScore}/{match.playerWickets} ({match.playerBalls} balls)
+                </strong>
+              </div>
+              <div className="stat-box">
+                <span>Bot&apos;s Final Score</span>
+                <strong>
+                  {match.botScore}/{match.botWickets} ({match.botBalls} balls)
+                </strong>
+              </div>
+              <div className="stat-box">
+                <span>Total Match Runs</span>
+                <strong>{match.playerScore + match.botScore}</strong>
+              </div>
+              <div className="stat-box">
+                <span>Total Balls Played</span>
+                <strong>{match.playerBalls + match.botBalls}</strong>
+              </div>
+              <div className="stat-box">
+                <span>Toss Winner</span>
+                <strong>{match.tossWinner === 'PLAYER' ? 'YOU' : 'BOT'}</strong>
+              </div>
+              <div className="stat-box">
+                <span>Batted First</span>
+                <strong>{match.firstBatter === 'PLAYER' ? 'YOU' : 'BOT'}</strong>
+              </div>
+            </div>
+
+            <div className="result-actions">
+              <button type="button" className="btn btn-primary btn-lg" onClick={startNewMatch}>
+                🔄 PLAY AGAIN
+              </button>
+              <button
+                type="button"
+                className="btn btn-secondary btn-lg"
+                onClick={returnToMainMenu}
+              >
+                🏠 MAIN MENU
+              </button>
+            </div>
+          </section>
+        )}
+      </main>
+
+      <HowToPlayModal isOpen={showHowTo} onClose={() => setShowHowTo(false)} />
+      <SettingsModal
+        isOpen={showSettings}
+        onClose={() => setShowSettings(false)}
+        settings={settings}
+        onUpdateSettings={updateSettings}
+        onRestartMatch={startNewMatch}
+        onReturnHome={returnToMainMenu}
+        inMatch={isInMatch}
+      />
+    </div>
+  );
+}
+```
+
+---
+
+### 15. `src/App.css`
+
+Modern cricket-broadcast styling with animated stadium floodlights, pitch & scoreboard graphics, responsive mobile & desktop grids, gesture cards, and smooth score/outcome animations.
+
+```css
+:root {
+  --bg-deep: #060d1f;
+  --bg-card: rgba(12, 23, 48, 0.86);
+  --border-glass: rgba(148, 163, 184, 0.22);
+  --cyan: #22d3ee;
+  --emerald: #10b981;
+  --gold: #fbbf24;
+  --crimson: #ef4444;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  background: var(--bg-deep);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= ANIMATED STADIUM BACKGROUND ================= */
+.stadium-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 15%, #122854 0%, #071024 55%, #030712 100%);
+}
+
+.stadium-sky-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 45%, rgba(16, 185, 129, 0.14), transparent 65%);
+  transition: background 0.5s ease;
+}
+
+.stadium-bg--wicket .stadium-sky-glow {
+  background: radial-gradient(ellipse at 50% 45%, rgba(239, 68, 68, 0.28), transparent 65%);
+}
+
+.stadium-bg--gold .stadium-sky-glow {
+  background: radial-gradient(ellipse at 50% 45%, rgba(251, 191, 36, 0.26), transparent 65%);
+}
+
+.floodlight-tower {
+  position: absolute;
+  top: 4%;
+  width: 66px;
+  z-index: 1;
+}
+
+.floodlight-tower--left {
+  left: 4%;
+}
+
+.floodlight-tower--right {
+  right: 4%;
+}
+
+.floodlight-head {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  padding: 8px;
+  background: #1e293b;
+  border: 2px solid #475569;
+  border-radius: 8px;
+}
+
+.floodlight-head span {
+  display: block;
+  height: 10px;
+  border-radius: 3px;
+  background: #e0f2fe;
+  box-shadow: 0 0 14px #7dd3fc, 0 0 28px #38bdf8;
+  animation: floodPulse 3.5s ease-in-out infinite alternate;
+}
+
+.floodlight-beam {
+  position: absolute;
+  top: 28px;
+  width: 420px;
+  height: 520px;
+  background: linear-gradient(
+    to bottom,
+    rgba(186, 230, 253, 0.17),
+    rgba(56, 189, 248, 0.04) 60%,
+    transparent
+  );
+  clip-path: polygon(10% 0, 26% 0, 100% 100%, 0% 100%);
+  animation: beamSweep 8s ease-in-out infinite alternate;
+}
+
+.floodlight-beam--left {
+  left: -10px;
+  transform-origin: top left;
+}
+
+.floodlight-beam--right {
+  right: -10px;
+  clip-path: polygon(74% 0, 90% 0, 100% 100%, 0% 100%);
+  transform-origin: top right;
+}
+
+@keyframes floodPulse {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+@keyframes beamSweep {
+  0% { transform: rotate(-2deg); }
+  100% { transform: rotate(3deg); }
+}
+
+.bg-stadium-scoreboard {
+  position: absolute;
+  top: 74px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: rgba(148, 163, 184, 0.65);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+}
+
+.bg-sb-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--emerald);
+  box-shadow: 0 0 8px var(--emerald);
+}
+
+.stadium-tiers {
+  position: absolute;
+  bottom: 24%;
+  left: -10%;
+  right: -10%;
+  height: 160px;
+  border-radius: 50% 50% 0 0;
+  border-top: 3px solid rgba(56, 189, 248, 0.2);
+  background: radial-gradient(ellipse at 50% 100%, rgba(30, 41, 59, 0.6), transparent 70%);
+}
+
+.stadium-outfield {
+  position: absolute;
+  bottom: -14%;
+  left: 50%;
+  transform: translateX(-50%) perspective(650px) rotateX(58deg);
+  width: min(1150px, 120vw);
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #0f5132 0%, #064e3b 55%, #022c22 100%);
+  border: 5px solid rgba(255, 255, 255, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boundary-rope {
+  position: absolute;
+  inset: 18px;
+  border-radius: 50%;
+  border: 2px dashed rgba(251, 191, 36, 0.55);
+}
+
+.cricket-pitch {
+  position: relative;
+  width: 94px;
+  height: 270px;
+  background: linear-gradient(180deg, #b0895c 0%, #c49b6c 50%, #a47e53 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+}
+
+.crease-line {
+  position: absolute;
+  left: -14px;
+  right: -14px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.75);
+}
+.crease-line--top { top: 26px; }
+.crease-line--bottom { bottom: 26px; }
+
+.stumps-mini {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3px;
+}
+.stumps-mini--top { top: 12px; }
+.stumps-mini--bottom { bottom: 12px; }
+
+.stumps-mini span {
+  width: 3px;
+  height: 14px;
+  background: #fde68a;
+  border-radius: 2px;
+}
+
+.stadium-particles span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(251, 191, 36, 0.45);
+  animation: floatParticle 10s linear infinite;
+}
+.stadium-particles span:nth-child(1) { left: 15%; top: 75%; animation-duration: 9s; }
+.stadium-particles span:nth-child(2) { left: 32%; top: 82%; animation-duration: 12s; }
+.stadium-particles span:nth-child(3) { left: 48%; top: 70%; animation-duration: 8s; }
+.stadium-particles span:nth-child(4) { left: 65%; top: 85%; animation-duration: 11s; }
+.stadium-particles span:nth-child(5) { left: 82%; top: 72%; animation-duration: 10s; }
+.stadium-particles span:nth-child(6) { left: 90%; top: 88%; animation-duration: 13s; }
+
+@keyframes floatParticle {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  20% { opacity: 0.7; }
+  100% { transform: translateY(-280px) scale(0.4); opacity: 0; }
+}
+
+/* ================= TOP NAV & STAGE ================= */
+.top-nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: rgba(6, 13, 31, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.brand-mini {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.55rem;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: rgba(30, 41, 59, 0.85);
+  color: #e2e8f0;
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--cyan);
+}
+
+.stage-container {
+  position: relative;
+  z-index: 5;
+  flex: 1;
+  width: min(1240px, 95vw);
+  margin: 18px auto 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 1.05rem;
+}
+
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 0.88rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+}
+
+.btn-secondary {
+  background: rgba(30, 41, 59, 0.9);
+  color: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+}
+
+/* ================= HOME SCREEN ================= */
+.home-screen {
+  display: grid;
+  gap: 22px;
+}
+
+.hero-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 34px 28px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.14);
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  color: var(--cyan);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-family: 'Teko', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  line-height: 0.95;
+  margin: 0;
+  background: linear-gradient(180deg, #ffffff 20%, #bae6fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin: 8px 0 12px;
+}
+
+.hero-desc {
+  max-width: 680px;
+  margin: 0 auto 24px;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.home-guide-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px 22px;
+}
+
+.guide-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.guide-card-head h2 {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.65rem;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.guide-card-head span {
+  font-size: 0.82rem;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.home-gesture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  gap: 10px;
+}
+
+.gesture-tile {
+  position: relative;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 14px;
+  padding: 12px 8px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.gesture-tile-num {
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.gesture-tile p {
+  margin: 0;
+  font-size: 0.74rem;
+  color: #cbd5e1;
+  line-height: 1.25;
+}
+
+/* ================= HAND ICON SVG ================= */
+.hand-icon .hand-fill {
+  fill: #e2e8f0;
+}
+.hand-icon .hand-active {
+  fill: #38bdf8;
+}
+.hand-icon .hand-folded {
+  fill: #64748b;
+}
+.hand-icon .hand-crease {
+  stroke: #475569;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.hand-icon .hand-arrow {
+  stroke: #fbbf24;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hand-icon .hand-touch-ring {
+  fill: none;
+  stroke: #fbbf24;
+  stroke-width: 2.5;
+}
+
+/* ================= CENTER CARDS (TOSS / DECISION / BREAK / RESULT) ================= */
+.center-card {
+  width: min(740px, 100%);
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 32px 26px;
+  text-align: center;
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.5);
+  animation: fadeSlideIn 0.3s ease;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.stage-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  background: rgba(251, 191, 36, 0.16);
+  color: var(--gold);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  margin-bottom: 10px;
+}
+
+.center-card h2 {
+  font-family: 'Teko', sans-serif;
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  margin: 0 0 10px;
+  letter-spacing: 0.03em;
+}
+
+.center-card p {
+  color: #cbd5e1;
+  margin: 0 0 22px;
+}
+
+.toss-choice-buttons,
+.decision-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.toss-option-btn,
+.decision-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 26px 18px;
+  border-radius: 18px;
+  border: 2px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.88);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toss-option-btn:hover,
+.decision-btn:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+  box-shadow: 0 14px 30px rgba(34, 211, 238, 0.2);
+}
+
+.toss-opt-title {
+  font-family: 'Teko', sans-serif;
+  font-size: 2.6rem;
+  line-height: 1;
+}
+.toss-option-btn--odd .toss-opt-title { color: var(--gold); }
+.toss-option-btn--even .toss-opt-title { color: var(--cyan); }
+.toss-opt-sub { font-size: 0.84rem; color: var(--text-muted); }
+
+.dec-icon { font-size: 2.2rem; }
+.decision-btn strong { font-size: 1.25rem; }
+.decision-btn span:last-child { font-size: 0.85rem; color: var(--text-muted); }
+
+.toss-breakdown {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+.breakdown-row span { color: var(--text-muted); }
+
+.text-win { color: var(--emerald); }
+.text-lose { color: var(--gold); }
+
+.bot-decision-anim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.bot-decision-title {
+  color: var(--gold);
+}
+
+/* ================= CRICKET SCOREBOARD ================= */
+.cricket-scoreboard {
+  position: relative;
+  z-index: 6;
+  width: min(1240px, 95vw);
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.95), rgba(17, 36, 72, 0.95));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 16px;
+  padding: 12px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.sb-teams {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sb-team {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  background: rgba(2, 6, 23, 0.55);
+  border: 1px solid transparent;
+}
+
+.sb-team--active {
+  border-color: var(--emerald);
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.25);
+}
+
+.sb-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.sb-score {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.score-pop {
+  animation: scorePop 0.35s ease;
+}
+
+@keyframes scorePop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.22); color: var(--gold); }
+  100% { transform: scale(1); }
+}
+
+.sb-divider {
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: var(--cyan);
+}
+
+.sb-meta {
+  display: flex;
+  gap: 10px;
+}
+
+.sb-pill {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+}
+
+.sb-pill span { color: var(--text-muted); }
+.sb-pill strong { color: #fff; font-size: 0.96rem; }
+.sb-pill--gold { border-color: rgba(251, 191, 36, 0.5); }
+.sb-pill--gold strong { color: var(--gold); }
+
+.sb-last-ball {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+}
+
+.sb-last-nums span {
+  color: var(--text-muted);
+  margin-right: 6px;
+}
+
+.sb-last-result {
+  padding: 5px 11px;
+  border-radius: 8px;
+  font-weight: 800;
+  background: rgba(51, 65, 85, 0.7);
+}
+.sb-last-result.is-runs {
+  background: rgba(16, 185, 129, 0.22);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+}
+.sb-last-result.is-out {
+  background: rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.55);
+}
+
+.sb-timeline {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.timeline-chip {
+  min-width: 28px;
+  height: 26px;
+  padding: 0 7px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  background: rgba(30, 41, 59, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+.timeline-chip.chip-big {
+  background: rgba(251, 191, 36, 0.2);
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.timeline-chip.chip-out {
+  background: rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+  border-color: var(--crimson);
+}
+
+/* ================= MATCH ARENA ================= */
+.match-arena {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 0.85fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.arena-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ================= AVATARS ================= */
+.avatar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.avatar-card.is-batting {
+  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.16);
+}
+
+.avatar-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--border-glass);
+  color: var(--cyan);
+}
+
+.avatar-svg {
+  width: 82px;
+  height: 82px;
+}
+
+.bot-antenna-pulse {
+  animation: antennaGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes antennaGlow {
+  from { opacity: 0.55; }
+  to { opacity: 1; }
+}
+
+.avatar-name {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.avatar-status {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.bot-speech-bubble {
+  margin-top: 4px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  font-size: 0.84rem;
+  color: #e2e8f0;
+  line-height: 1.35;
+}
+
+/* ================= CLASH CENTER PANEL ================= */
+.clash-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 22px 18px;
+  text-align: center;
+}
+
+.innings-banner {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.2), rgba(34, 211, 238, 0.2));
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.chase-tracker {
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.clash-headline {
+  font-family: 'Teko', sans-serif;
+  font-size: 2.3rem;
+  margin: 0 0 4px;
+}
+
+.clash-sub {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.clash-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.num-card {
+  width: 104px;
+  height: 122px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 2px solid rgba(56, 189, 248, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.num-card--bot {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.num-card.is-revealed {
+  transform: scale(1.06);
+  box-shadow: 0 0 26px rgba(34, 211, 238, 0.28);
+}
+
+.num-card-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.num-card strong {
+  font-family: 'Teko', sans-serif;
+  font-size: 3.4rem;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+.clash-plus,
+.clash-vs {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+}
+
+.clash-banner {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  animation: scorePop 0.35s ease;
+}
+
+.clash-banner--runs,
+.clash-banner--win {
+  background: rgba(16, 185, 129, 0.24);
+  border: 1px solid var(--emerald);
+  color: #6ee7b7;
+}
+
+.clash-banner--big {
+  background: rgba(251, 191, 36, 0.24);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.clash-banner--out,
+.clash-banner--lose {
+  background: rgba(239, 68, 68, 0.26);
+  border: 1px solid var(--crimson);
+  color: #fca5a5;
+}
+
+.bot-locked-pill {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px dashed rgba(251, 191, 36, 0.45);
+  color: #fde68a;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.rules-reminder {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ================= WEBCAM PANEL ================= */
+.webcam-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 12px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.status-chip {
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid var(--border-glass);
+}
+.status-chip--ready { color: #34d399; border-color: rgba(16, 185, 129, 0.5); }
+.status-chip--loading { color: var(--gold); }
+.status-chip--error { color: #fca5a5; border-color: var(--crimson); }
+
+.webcam-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #020617;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+.webcam-video,
+.webcam-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+.webcam-overlay-msg {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.84);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+  gap: 10px;
+  z-index: 3;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(56, 189, 248, 0.25);
+  border-top-color: var(--cyan);
+  border-radius: 50%;
+  animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.detected-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background: rgba(2, 6, 23, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 12px;
+  padding: 6px 12px;
+  text-align: center;
+}
+
+.detected-badge.is-valid {
+  border-color: var(--emerald);
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.35);
+}
+
+.detected-label {
+  display: block;
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.detected-badge strong {
+  font-family: 'Teko', sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.stability-bar-wrap {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  background: rgba(2, 6, 23, 0.8);
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.stability-bar-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #e2e8f0;
+}
+
+.stability-track {
+  height: 7px;
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.stability-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--emerald));
+  transition: width 0.08s linear;
+}
+
+.webcam-telemetry {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.telemetry-hint {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+.finger-pills {
+  display: flex;
+  gap: 4px;
+}
+
+.finger-pill {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 800;
+  background: rgba(30, 41, 59, 0.9);
+  color: #64748b;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.finger-pill.is-up {
+  background: rgba(16, 185, 129, 0.24);
+  color: #34d399;
+  border-color: var(--emerald);
+}
+
+/* Fallback Gesture Pad */
+.pad-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+}
+
+.gesture-pad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.pad-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.14s ease, border-color 0.15s ease;
+}
+
+.pad-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: var(--cyan);
+}
+
+.pad-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pad-num {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: var(--gold);
+}
+
+/* ================= INNINGS BREAK & MATCH RESULT ================= */
+.break-score-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.break-score-box span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.break-score-box strong {
+  font-family: 'Teko', sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.break-target strong { color: var(--gold); }
+.break-arrow { font-size: 2rem; color: var(--cyan); }
+
+.result-confetti {
+  font-size: 2.2rem;
+  margin-bottom: 4px;
+  animation: scorePop 0.8s ease infinite alternate;
+}
+
+.result-screen--PLAYER .result-title { color: var(--emerald); }
+.result-screen--BOT .result-title { color: var(--crimson); }
+.result-screen--TIE .result-title { color: var(--gold); }
+
+.result-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.stat-box {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.stat-box span {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.stat-box strong {
+  font-size: 1rem;
+  color: #f8fafc;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ================= MODALS ================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(2, 6, 23, 0.78);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal-card {
+  width: min(500px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #0f172a;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 20px;
+  padding: 20px 22px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+}
+
+.modal-card--wide {
+  width: min(780px, 100%);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.modal-header h2 {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.modal-close {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid var(--border-glass);
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.howto-steps {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.howto-step {
+  display: flex;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--cyan);
+  color: #020617;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.howto-step h4 { margin: 0 0 4px; }
+.howto-step p { margin: 0; font-size: 0.88rem; color: #cbd5e1; }
+
+.guide-subheading {
+  margin: 8px 0 10px;
+  font-size: 1rem;
+  color: var(--gold);
+}
+
+.gesture-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 8px;
+}
+
+.guide-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(2, 6, 23, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.guide-item-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.78rem;
+}
+
+.guide-item-info strong { color: var(--cyan); }
+.guide-item-info span { color: #cbd5e1; }
+
+.modal-footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.settings-list {
+  display: grid;
+  gap: 12px;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: rgba(2, 6, 23, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.setting-row strong { display: block; font-size: 0.94rem; }
+.setting-row span { font-size: 0.78rem; color: var(--text-muted); }
+
+.setting-row--col {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.difficulty-pills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.diff-pill {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border-glass);
+  background: rgba(30, 41, 59, 0.8);
+  color: #cbd5e1;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.diff-pill.is-active {
+  background: rgba(34, 211, 238, 0.22);
+  border-color: var(--cyan);
+  color: #fff;
+}
+
+.settings-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 960px) {
+  .match-arena {
+    grid-template-columns: 1fr;
+  }
+
+  .arena-col--center {
+    order: -1;
+  }
+
+  .toss-choice-buttons,
+  .decision-buttons,
+  .result-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+```
+
+---
+
+### Setup & Run Instructions
+
+1. Create the project files above inside a folder named `odd-even-hand-cricket`.
+2. Install dependencies and start the development server:
+   ```bash
+   npm install
+   npm run dev
+   ```
+3. Open the local URL shown by Vite (e.g., `http://localhost:5173`) in Chrome/Edge/Firefox/Safari, allow webcam access when prompted, and click **START GAME**.
+4. **No webcam / testing mode?** Open **⚙️ Settings** anytime and toggle **Webcam Hand Recognition** OFF to play using the interactive on-screen **1–9 Gesture Pad**.
+Sources
